@@ -26,16 +26,16 @@ const Card = (props) => {
         <img src={props.actionShot} />
       </div>
       <div className="card__playerInfo">
-        <div className="card__playerInfoBanner">
+        <div className="card__playerInfoBanner" style={{backgroundColor:resources[props.teamID].primaryColor}}>
           <span>#{props.number}</span>
-          |
+          <span>|</span>
           <span>{props.name}</span>
-          |
+          <span>|</span>
           <span>{props.position}</span>
         </div>
       </div>
       <div className="card__logo">
-        {resources[22].logo}
+        <div style={{width:'170px',height:"100px"}}>{resources[props.teamID].logo}</div>
       </div>
       <style jsx>{`
         .card {
@@ -43,11 +43,16 @@ const Card = (props) => {
           width: 250px;
           font-family: sans-serif;
           margin: 10px;
-          box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
+          box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
           overflow: hidden;
           position: relative;
           display: flex;
-          flex-direction: column
+          flex-direction: column;
+          transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        }
+        .card:hover {
+          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+          transform: scale(1.1)
         }
         .card__playerPic {
           width: 100%;
@@ -77,19 +82,25 @@ const Card = (props) => {
         .card__logo {
           display: flex;
           width: 100%;
-          height: 20%;
+          height: 65px;
           justify-content:center;
           position: absolute;
-          top:0;
+          bottom:0;
+          z-index: 9999;
         }
         .card__playerInfoBanner span {
-          color: #454545;
+          padding: 5px 0;
+          align-items:center
         }
         .card__playerInfo {
           display: flex;
           flex-wrap: wrap;
           width: 100%;
           height: 100%;
+          z-index: 99999;
+          align-items:center;
+          color: white;
+          text-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
         }
       `}</style>
     </div>
