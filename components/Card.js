@@ -4,34 +4,19 @@ import LogoEDM from '../static/logos/NHL-icons-EDM.svg';
 
 const Card = (props) => {
 
-  // useEffect(
-  //   () => {
-  //     const teamUrl = "https://statsapi.web.nhl.com/api/v1/teams/22/roster"
-  //     fetch(teamUrl).then(results => results.json()).then(json => json.roster.map(player => {
-  //       let actionShot = "https://nhl.bamcontent.com/images/actionshots/" + player.person.id + ".jpg"
-  //       let headShot = "https://nhl.bamcontent.com/images/headshots/current/168x168/"+player.person.id+".jpg"
-  //       let name = player.person.fullName
-  //       return (
-  //         <img src={actionShot}/>
-  //       )
-  //     })).then(playerPics => {
-  //       updatePicUrls(playerPics)
-  //     })
-  //   }
-  // )
   return (
     <div className="card">
       <div className="card__playerPic">
         <div className="card__playerPic--gradient"></div>
-        <img src={props.actionShot} />
+        <img src={props.picUrl} />
       </div>
       <div className="card__playerInfo">
         <div className="card__playerInfoBanner" style={{backgroundColor:resources[props.teamID].primaryColor}}>
-          <span>#{props.number}</span>
+          <span>#{props.playerData.number}</span>
           <span>|</span>
-          <span>{props.name}</span>
+          <span>{props.playerData.name}</span>
           <span>|</span>
-          <span>{props.position}</span>
+          <span>{props.playerData.position}</span>
         </div>
       </div>
       <div className="card__logo">
@@ -42,17 +27,12 @@ const Card = (props) => {
           height: 350px;
           width: 250px;
           font-family: sans-serif;
-          margin: 10px;
           box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
           overflow: hidden;
           position: relative;
           display: flex;
           flex-direction: column;
           transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-        }
-        .card:hover {
-          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-          transform: scale(1.1)
         }
         .card__playerPic {
           width: 100%;
