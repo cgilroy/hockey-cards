@@ -11,7 +11,7 @@ const Card = (props) => {
         <img src={props.picUrl} />
       </div>
       <div className="card__playerInfo">
-        <div className="card__playerInfoBanner" style={{backgroundColor:resources[props.teamID].primaryColor}}>
+        <div className="card__playerInfoBanner" style={{backgroundColor:resources[props.playerData.teamID].primaryColor}}>
           <span>#{props.playerData.number}</span>
           <span>|</span>
           <span>{props.playerData.name}</span>
@@ -20,7 +20,7 @@ const Card = (props) => {
         </div>
       </div>
       <div className="card__logo">
-        <div style={{width:'170px',height:"100px"}}>{resources[props.teamID].logo}</div>
+        <div style={{width:'170px',height:"100px"}}>{resources[props.playerData.teamID].logo}</div>
       </div>
       <style jsx>{`
         .card {

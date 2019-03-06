@@ -30,7 +30,7 @@ export default function Deck(props) {
       setTimeout(() => {
         gone.clear() || set(i => to(i))
         console.log('deck', props.currentPage)
-        props.nextPageFunc()
+        // props.nextPageFunc()
       }, 400)
   })
 
@@ -75,7 +75,7 @@ export default function Deck(props) {
       boxShadow: '0 12.5px 100px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3)',
       overflow: 'hidden',
       }}>
-        <Card picUrl={props.cards[i].src} playerData={props.playerData[i]} teamID={props.teamID}/>
+        <Card picUrl={props.cards[i].src} playerData={props.playerData[i]}/>
       </animated.div>
     </animated.div>
   ))
