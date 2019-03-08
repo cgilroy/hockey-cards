@@ -5,10 +5,9 @@ import Card from './Card.js'
 // import './styles.css'
 
 export default function Deck(props) {
-  console.log('deck',props.cards)
   // These two are just helpers, they curate spring data, values that are later being interpolated into css
-  const to = i => ({ x: 0, y: i * -1, scale: 1, rot: -10 + Math.random() * 20, delay: i * 100 })
-  const from = i => ({ x: 0, rot: 0, scale: 1.5, y: 1000 })
+  const to = i => ({ x: 0, y: i * -1, scale: 1, rot: -1 + Math.random() * 2, delay:0})
+  const from = i => ({ x: 0, rot: 0, scale: 1, y: i * -1 })
   // This is being used down there in the view, it interpolates rotation and scale into a css transform
   const trans = (r, s) => `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
   const [gone] = useState(() => new Set()) // The set flags all the cards that are flicked out
@@ -29,7 +28,6 @@ export default function Deck(props) {
     if (!down && gone.size === props.cards.length)
       setTimeout(() => {
         gone.clear() || set(i => to(i))
-        console.log('deck', props.currentPage)
         // props.nextPageFunc()
       }, 400)
   })

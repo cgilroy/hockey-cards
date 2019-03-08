@@ -1,4 +1,4 @@
-import './PackOpenAnimation.css'
+// import './PackOpenAnimation.css'
 
 export default function PackOpenAnimation() {
   return (

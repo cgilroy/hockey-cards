@@ -4,7 +4,6 @@ const PlayerPicker = (props) => {
   var outputPlayers = []
   while(outputPlayers.length < 10){
       var r = Math.floor(Math.random()*(props.playerList.length-1)) + 1;
-      console.log('r',r)
       if(outputPlayers.indexOf(r) === -1) outputPlayers.push(r);
   }
 
@@ -14,7 +13,6 @@ const PlayerPicker = (props) => {
     () => {
       var picPromises = []
       var playerData = []
-      console.log('effectoutput',outputPlayers)
       outputPlayers.map(index => {
         // let actionShot = "https://nhl.bamcontent.com/images/actionshots/" + player.person.id + ".jpg"
         // let headShot = "https://nhl.bamcontent.com/images/headshots/current/168x168/"+player.person.id+".jpg"
@@ -33,10 +31,9 @@ const PlayerPicker = (props) => {
         )
 
       })
-      console.log('picPromises',picPromises)
         Promise.all(picPromises).then(cards => {
-            console.log('cards',cards)
             setCards(<Deck cards={cards} playerData={playerData}/>)
+            props.doneLoad()
         })
     },[]
   )

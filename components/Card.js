@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import resources from './TeamResources.js'
 import LogoEDM from '../static/logos/NHL-icons-EDM.svg';
+import _JSXStyle from 'styled-jsx/style'
 
 const Card = (props) => {
 
