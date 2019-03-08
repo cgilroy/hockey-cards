@@ -70,7 +70,9 @@ const Card = (props) => {
         }
         .card__playerInfoBanner span {
           padding: 5px 0;
-          align-items:center
+          align-items:center;
+          display: flex;
+          text-align:center
         }
         .card__playerInfo {
           display: flex;

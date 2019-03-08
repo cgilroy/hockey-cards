@@ -1,4 +1,4 @@
-import App from '../components/App.js'
+import CardsContainer from '../components/CardsContainer.js'
 export default () => (
-  <App />
+  <CardsContainer />
 )
