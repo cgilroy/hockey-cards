@@ -355,7 +355,7 @@ export default function ClosedPack(props) {
             <div className="corner corner-bottomleft"></div>
             <div className="corner corner-bottomright"></div>
           </div>
-          <div className="foldout foldout-left"></div>
+          <div className="foldout foldout-left" onAnimationEnd={() => props.doneAnimation()}></div>
           <div className="foldout foldout-right"></div>
         </div>
       </div>

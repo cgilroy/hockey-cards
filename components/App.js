@@ -6,24 +6,33 @@ import {useState,useEffect} from 'react'
 export default function App() {
   const [packState, updatePack] = useState('closed')
   const [showPack, updateShowPack] = useState(true)
+  const [showCards, updateShowCards] = useState(false)
   const [isLoading, updateIsLoading] = useState(false)
   const [cardsContainer, updateCardsContainer] = useState()
   const loadPack = () => {
+    console.log('loadPack')
     updateIsLoading(true)
     updateCardsContainer(<CardsContainer doneLoad={doneLoad}/>)
   }
 
   const doneLoad = () => {
+    console.log('doneLoad')
     updateIsLoading(false)
     updatePack('open')
   }
 
+  const doneAnimation = () => {
+    console.log('doneAnimation')
+    updateShowPack(false)
+    updateShowCards(true)
+  }
+  console.log('render-app')
   return (
     <div className="app-container">
       <button onClick={loadPack} style={{position:'absolute',left:0}}>Load Pack</button>
       {isLoading && <div className="loading"></div>}
       {cardsContainer}
-      {showPack && <ClosedPack packState={packState} />}
+      {showPack && <ClosedPack packState={packState} doneAnimation={doneAnimation}/>}
       <style jsx>{`
         .app-container {
           width: 100vw;
