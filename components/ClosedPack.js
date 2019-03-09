@@ -96,7 +96,7 @@ export default function ClosedPack(props) {
         transform: rotate3d(1, 1, 0, 90deg);
         animation: unfold-corner-topleft 0.3s linear forwards;
         animation-delay: 0.3s;
-        background-image: url('/static/corner-topleft.png')
+        background-image: url('static/corner-topleft.png')
       }
       .corner-topright {
         right: 0;
@@ -104,7 +104,7 @@ export default function ClosedPack(props) {
         transform: rotate3d(-1, 1, 0, 90deg);
         animation: unfold-corner-topright 0.3s linear forwards;
         animation-delay: 0.3s;
-        background-image: url('/static/corner-topright.png')
+        background-image: url('static/corner-topright.png')
       }
       .corner-bottomleft {
         left: 0;
@@ -112,7 +112,7 @@ export default function ClosedPack(props) {
         transform: rotate3d(-1, 1, 0, 90deg);
         animation: unfold-corner-bottomleft 0.3s linear forwards;
         animation-delay: 0.3s;
-        background-image: url('/static/corner-bottomleft.png');
+        background-image: url('static/corner-bottomleft.png');
       }
       .corner-bottomright {
         right: 0;
@@ -120,7 +120,7 @@ export default function ClosedPack(props) {
         transform: rotate3d(1, 1, 0, 90deg);
         animation: unfold-corner-bottomright 0.3s linear forwards;
         animation-delay: 0.3s;
-        background-image: url('/static/corner-bottomright.png');
+        background-image: url('static/corner-bottomright.png');
       }
       .corner::before {
         content: "";
@@ -181,13 +181,13 @@ export default function ClosedPack(props) {
         top: 0;
         transform-origin: top;
         animation: unfold-top 0.3s linear forwards;
-        background: url('/static/foldup.png')
+        background: url('static/foldup.png')
       }
       .bottom-foldup {
         bottom: 0;
         transform-origin: bottom;
         animation: unfold-bottom 0.3s linear forwards;
-        background: url('/static/folddown.png');
+        background: url('static/folddown.png');
       }
       .foldup::before {
         content: "";
@@ -233,7 +233,7 @@ export default function ClosedPack(props) {
         animation-delay: 0.6s;
         transform-origin: left;
         transform: rotate3d(0, 1, 0, 90deg);
-        background-image: url('/static/foldout-left.png')
+        background-image: url('static/foldout-left.png')
       }
       .foldout-right {
         width: 150px;
@@ -243,7 +243,7 @@ export default function ClosedPack(props) {
         animation-delay: 0.6s;
         transform-origin: right;
         transform: rotate3d(0, -1, 0, 90deg);
-        background-image: url('/static/foldout-right.png')
+        background-image: url('static/foldout-right.png')
       }
 
       .foldout::before {
@@ -292,7 +292,7 @@ export default function ClosedPack(props) {
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
       }
       .paper-wrapper {
-        background-image: url('/static/wrapper-center.png');
+        background-image: url('static/wrapper-center.png');
         height: 350px;
         width: 250px;
       }
@@ -326,7 +326,7 @@ export default function ClosedPack(props) {
           <div className="top-foldup foldup">
             <div className="corner__blockout corner__blockout-topleft"></div>
             <div className="corner__blockout corner__blockout-topright"></div>
-            <div className="corner corner-topleft" style={{background: "url(require('/static/corner-topleft.png')"}}></div>
+            <div className="corner corner-topleft"></div>
             <div className="corner corner-topright"></div>
           </div>
           <div className="bottom-foldup foldup">
