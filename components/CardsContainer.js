@@ -3,7 +3,6 @@ import Card from './Card.js'
 import Deck from './Deck.js'
 import ClosedPack from './ClosedPack.js'
 import PlayerPicker from './PlayerPicker.js'
-import PackOpenAnimation from './PackOpenAnimation.js'
 import _JSXStyle from 'styled-jsx/style'
 // const url = "https://nhl.bamcontent.com/images/headshots/current/168x168/"+props.thirdStar.id+".jpg"
 const CardsContainer = (props) => {
@@ -35,6 +34,7 @@ const CardsContainer = (props) => {
   const openPack = () => {
     updatePackOpen(true)
   }
+  console.log('cardsCont')
   return (
     <div style={{width:'100%',height:"100%",overflow:'hidden',position:'relative',display:'flex',alignItems:'center'}}>
       {cards}

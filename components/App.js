@@ -13,6 +13,7 @@ export default function App() {
     console.log('loadPack')
     updateIsLoading(true)
     updateCardsContainer(<CardsContainer doneLoad={doneLoad}/>)
+    console.log('immediatecardcont',cardsContainer)
   }
 
   const doneLoad = () => {
@@ -23,15 +24,16 @@ export default function App() {
 
   const doneAnimation = () => {
     console.log('doneAnimation')
-    updateShowPack(false)
     updateShowCards(true)
+    // updateShowPack(false)
   }
-  console.log('render-app')
+  console.log('render-app',showCards)
+  let displayCards = showCards ? {height:'100%',width:'100%'} : {display:'none'}
   return (
     <div className="app-container">
       <button onClick={loadPack} style={{position:'absolute',left:0}}>Load Pack</button>
       {isLoading && <div className="loading"></div>}
-      {cardsContainer}
+      <div style={displayCards}>{cardsContainer}</div>
       {showPack && <ClosedPack packState={packState} doneAnimation={doneAnimation}/>}
       <style jsx>{`
         .app-container {
@@ -40,7 +42,7 @@ export default function App() {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: #778
+          background: #ccc;
         }
         .loading {
           border: 6px solid #f3f3f3; /* Light grey */
