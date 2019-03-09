@@ -2,7 +2,30 @@ import _JSXStyle from 'styled-jsx/style'
 export default function ClosedPack(props) {
   let animateStyle = (
     <style jsx>{`
-
+      .animation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        height: 478px;
+        width: 550px;
+        animation: zoom 0.5s linear forwards, spin 0.4s ease-in forwards;
+        animation-delay: 0.9s, 1.4s;
+      }
+      @keyframes zoom {
+        100% {
+          box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+          transform: scale(1.2)
+        }
+      }
+      @keyframes spin {
+        0% {
+          transform: scale(1.2)
+        }
+        100% {
+          transform: scale(1.2) rotate(50deg) translateX(1000px);
+        }
+      }
       .paper-wrapper {
         height: 350px;
         width: 250px;
@@ -11,6 +34,7 @@ export default function ClosedPack(props) {
       .paper {
         height: 100%;
         width: 100%;
+        position: relative;
       }
       .corner__blockout {
         height: 64px;
@@ -70,32 +94,32 @@ export default function ClosedPack(props) {
         left: 0;
         top: 0;
         transform: rotate3d(1, 1, 0, 90deg);
-        animation: unfold-corner-topleft 0.5s linear forwards;
-        animation-delay: 0.2s;
+        animation: unfold-corner-topleft 0.3s linear forwards;
+        animation-delay: 0.3s;
         background-image: url('/static/corner-topleft.png')
       }
       .corner-topright {
         right: 0;
         top: 0;
         transform: rotate3d(-1, 1, 0, 90deg);
-        animation: unfold-corner-topright 0.5s linear forwards;
-        animation-delay: 0.2s;
+        animation: unfold-corner-topright 0.3s linear forwards;
+        animation-delay: 0.3s;
         background-image: url('/static/corner-topright.png')
       }
       .corner-bottomleft {
         left: 0;
         bottom: 0;
         transform: rotate3d(-1, 1, 0, 90deg);
-        animation: unfold-corner-bottomleft 0.5s linear forwards;
-        animation-delay: 0.2s;
+        animation: unfold-corner-bottomleft 0.3s linear forwards;
+        animation-delay: 0.3s;
         background-image: url('/static/corner-bottomleft.png');
       }
       .corner-bottomright {
         right: 0;
         bottom: 0;
         transform: rotate3d(1, 1, 0, 90deg);
-        animation: unfold-corner-bottomright 0.5s linear forwards;
-        animation-delay: 0.2s;
+        animation: unfold-corner-bottomright 0.3s linear forwards;
+        animation-delay: 0.3s;
         background-image: url('/static/corner-bottomright.png');
       }
       .corner::before {
@@ -141,14 +165,7 @@ export default function ClosedPack(props) {
           transform: rotate3d(1, 1, 0, 180deg);
         }
       }
-      .paper {
-        background-image: -webkit-linear-gradient(
-          hsla(0, 0%, 0%, 0.2),
-          hsla(0, 0%, 100%, 0.025)
-        );
-        position: relative;
-        /* overflow: hidden; */
-      }
+
 
       /* top css */
       .foldup {
@@ -163,14 +180,14 @@ export default function ClosedPack(props) {
       .top-foldup {
         top: 0;
         transform-origin: top;
-        animation: unfold-top 0.2s linear forwards;
+        animation: unfold-top 0.3s linear forwards;
         background: url('/static/foldup.png')
       }
       .bottom-foldup {
         bottom: 0;
         transform-origin: bottom;
-        animation: unfold-bottom 0.2s linear forwards;
-        background: url('/static/folddown.png')
+        animation: unfold-bottom 0.3s linear forwards;
+        background: url('/static/folddown.png');
       }
       .foldup::before {
         content: "";
@@ -181,7 +198,7 @@ export default function ClosedPack(props) {
       .top-foldup::before {
         background: -webkit-linear-gradient(
           90deg,
-          hsla(0, 0%, 0%, 0.15) 0%,
+          hsla(0, 0%, 0%, 0.05) 0%,
           hsla(0, 0%, 0%, 0) 100%
         );
       }
@@ -189,7 +206,7 @@ export default function ClosedPack(props) {
         bottom: 0;
         background: -webkit-linear-gradient(
           90deg,
-          hsla(0, 0%, 0%, 0.15) 0%,
+          hsla(0, 0%, 0%, 0.05) 0%,
           hsla(0, 0%, 0%, 0) 100%
         );
       }
@@ -212,7 +229,7 @@ export default function ClosedPack(props) {
       .foldout-left {
         width: 154px;
         left: 0;
-        animation: unfold-left 0.5s linear forwards;
+        animation: unfold-left 0.3s linear forwards;
         animation-delay: 0.6s;
         transform-origin: left;
         transform: rotate3d(0, 1, 0, 90deg);
@@ -222,7 +239,7 @@ export default function ClosedPack(props) {
         width: 150px;
         right: 0;
         background: white;
-        animation: unfold-right 0.5s linear forwards;
+        animation: unfold-right 0.3s linear forwards;
         animation-delay: 0.6s;
         transform-origin: right;
         transform: rotate3d(0, -1, 0, 90deg);
@@ -239,14 +256,14 @@ export default function ClosedPack(props) {
       .foldout-left::before {
         background: -webkit-linear-gradient(
           0deg,
-          hsla(0, 0%, 0%, 0.15) 0%,
+          hsla(0, 0%, 0%, 0.05) 0%,
           hsla(0, 0%, 0%, 0) 100%
         );
       }
       .foldout-right::before {
         background: -webkit-linear-gradient(
           180deg,
-          hsla(0, 0%, 0%, 0.15) 0%,
+          hsla(0, 0%, 0%, 0.05) 0%,
           hsla(0, 0%, 0%, 0) 100%
         );
       }
@@ -256,16 +273,12 @@ export default function ClosedPack(props) {
         }
       }
       @keyframes unfold-right {
+        0% {
+          transform: rotate3d(0, -1, 0, 90deg);
+        }
         100% {
           transform: rotate3d(0, -1, 0, 180deg);
         }
-      }
-      .animation {
-        display: flex;
-        align-items: center;
-        justify-items: center;
-        position: absolute;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
       }
     `}</style>
   )
@@ -276,23 +289,30 @@ export default function ClosedPack(props) {
         align-items: center;
         justify-items: center;
         position: absolute;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
       }
       .paper-wrapper {
-        background:white;
         background-image: url('/static/wrapper-center.png');
         height: 350px;
         width: 250px;
+      }
+      .paper-wrapper::before {
+        content:'';
+        background: -webkit-linear-gradient(
+          90deg,
+          hsla(0, 0%, 0%, 0.5) 0%,
+          hsla(0, 0%, 0%, 0) 2%,
+          hsla(0, 0%, 0%, 0) 100%
+        );
+        height: 100%;
+        width: 100%;
+        position: absolute;
       }
       .paper {
         height: 100%;
         width: 100%;
       }
       .paper {
-        background-image: -webkit-linear-gradient(
-          hsla(0, 0%, 0%, 0.1),
-          hsla(0, 0%, 100%, 0.025)
-        );
         position: relative;
         /* overflow: hidden; */
       }
@@ -316,7 +336,7 @@ export default function ClosedPack(props) {
             <div className="corner corner-bottomright"></div>
           </div>
           <div className="foldout foldout-left"></div>
-          <div className="foldout foldout-right" onAnimationEnd={() => props.doneAnimation()}></div>
+          <div className="foldout foldout-right" onAnimationEnd={(e) => props.doneAnimation(e)}></div>
         </div>
       </div>
       {props.packState === 'closed' ? staticStyle : animateStyle}
