@@ -12,7 +12,7 @@ const Card = (props) => {
         <img src={props.picUrl} />
       </div>
       <div className="card__playerInfo">
-        <div className="card__playerInfoBanner" style={{backgroundColor:resources[props.playerData.teamID].primaryColor}}>
+        <div className="card__playerInfoBanner" style={{boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',backgroundColor:resources[props.playerData.teamID].primaryColor}}>
           <span>#{props.playerData.number}</span>
           <span>|</span>
           <span>{props.playerData.name}</span>
