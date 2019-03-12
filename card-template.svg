@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 996">
+  <defs>
+    <clipPath id="clip-path" transform="translate(711 290)"><path id="clipPath" d="M192.73,343.83a39.11,39.11,0,0,1,37.56-68.62V68a12,12,0,0,0-12-12H16.69a12,12,0,0,0-12,12V331.83a12,12,0,0,0,12,12Z" style="fill:none;stroke:#fff;stroke-miterlimit:10"/></clipPath>
+  </defs>
+  <title>card-template</title>
+  <g id="playerInfo">
+    <g style="clip-path:url(#clip-path)">
+      <image
+      width="1500"
+      height="996"
+      xlinkHref="http://www.tpstampede.ca/images/blackbox.jpg"/>
+    </g>
+      <path id="clipPath-2" data-name="clipPath" d="M192.73,343.83a39.11,39.11,0,0,1,37.56-68.62V68a12,12,0,0,0-12-12H16.69a12,12,0,0,0-12,12V331.83a12,12,0,0,0,12,12Z" transform="translate(711 290)" style="fill:none;stroke:#fff;stroke-miterlimit:10"/>
+      <path
+          id="dataBackground"
+          d="M245.49,309.94a32.88,32.88,0,1,1-9.14-22.75V69.08s-.24-21.78-22-21.78h-192S4.69,47.39,4.69,29.87V6.69H14c0,15.12,15.28,15.09,15.28,15.09H225.36c19.91,0,20.13,19.88,20.13,19.88V309.94"
+          transform="translate(711 290)"
+          style="fill:#f7f5e8;stroke:#000;stroke-miterlimit:10"/>
+    <g id="data">
+      <text transform="translate(762.22 329.74)" style="font-size:15px;font-family:Arial-BoldItalicMT, Arial;font-weight:700;font-style:italic">
+        <tspan>EDMONTON</tspan>
+        <tspan x="91.39" y="0" style="fill:#f4520b">OILERS</tspan>
+      </text>
+      <g id="logo"></g>
+      <text transform="translate(757.62 303.31)" style="font-size:13px;font-family:Arial-BoldMT, Arial;font-weight:700">
+        <tspan>CONNOR MCDAVID</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

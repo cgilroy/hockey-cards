@@ -13,6 +13,7 @@ const PlayerPicker = (props) => {
     () => {
       var picPromises = []
       var playerData = []
+      var playerPromises = []
       outputPlayers.map(index => {
         // let actionShot = "https://nhl.bamcontent.com/images/actionshots/" + player.person.id + ".jpg"
         // let headShot = "https://nhl.bamcontent.com/images/headshots/current/168x168/"+player.person.id+".jpg"
@@ -29,16 +30,18 @@ const PlayerPicker = (props) => {
             img.src = "https://nhl.bamcontent.com/images/actionshots/" + props.playerList[index].person.id + ".jpg"
           })
         )
-
+        playerPromises.push(
+          fetch('https://statsapi.web.nhl.com'+props.playerList[index].person.link).then(response => response.json()).then(json => json.people)
+        )
       })
         Promise.all(picPromises).then(cards => {
-            setCards(<Deck cards={cards} playerData={playerData}/>)
+          Promise.all(playerPromises).then(json => {
+            setCards(<Deck cards={cards} playerData={playerData} moreData={json}/>)
             props.doneLoad()
+          })
         })
     },[]
   )
-
-  console.log('outputPlayers',cards)
   return(cards)
 }
 

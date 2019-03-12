@@ -2,27 +2,13 @@ import React, { useState, useEffect } from 'react'
 import resources from './TeamResources.js'
 import LogoEDM from '../static/logos/NHL-icons-EDM.svg';
 import _JSXStyle from 'styled-jsx/style'
+import CardTemplate from './CardTemplate.js'
 
 const Card = (props) => {
 
   return (
     <div className="card">
-      <div className="card__playerPic">
-        <div className="card__playerPic--gradient"></div>
-        <img src={props.picUrl} />
-      </div>
-      <div className="card__playerInfo">
-        <div className="card__playerInfoBanner" style={{boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',backgroundColor:resources[props.playerData.teamID].primaryColor}}>
-          <span>#{props.playerData.number}</span>
-          <span>|</span>
-          <span>{props.playerData.name}</span>
-          <span>|</span>
-          <span>{props.playerData.position}</span>
-        </div>
-      </div>
-      <div className="card__logo">
-        <div style={{width:'170px',height:"100px"}}>{resources[props.playerData.teamID].logo}</div>
-      </div>
+      <CardTemplate picUrl={props.picUrl} playerData={props.playerData} moreData={props.moreData}/>
       <style jsx>{`
         .card {
           height: 350px;

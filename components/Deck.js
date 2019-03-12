@@ -73,7 +73,7 @@ export default function Deck(props) {
       boxShadow: '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)',
       overflow: 'hidden',
       }}>
-        <Card picUrl={props.cards[i].src} playerData={props.playerData[i]}/>
+        <Card picUrl={props.cards[i].src} playerData={props.playerData[i]} moreData={props.moreData[i]}/>
       </animated.div>
     </animated.div>
   ))
