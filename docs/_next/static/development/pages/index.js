@@ -209,6 +209,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _TeamResources_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TeamResources.js */ "./components/TeamResources.js");
 /* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
 /* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _CardTemplate_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./CardTemplate.js */ "./components/CardTemplate.js");
 
 var _jsxFileName = "/Users/cjgilroy/Desktop/Development/React/hockey-cards/components/Card.js";
 
@@ -267,114 +268,349 @@ LogoEDM.defaultProps = {
 };
 
 
+
 var Card = function Card(props) {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "jsx-1936536456" + " " + "card",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "jsx-1936536456" + " " + "card__playerPic",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 10
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "jsx-1936536456" + " " + "card__playerPic--gradient",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_CardTemplate_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    picUrl: props.picUrl,
+    playerData: props.playerData,
+    moreData: props.moreData,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
-    src: props.picUrl,
-    className: "jsx-1936536456",
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    id: "1936536456",
+    __self: this
+  }, ".card.jsx-1936536456{height:350px;width:250px;font-family:sans-serif;box-shadow:0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23);overflow:hidden;position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-transition:all 0.3s cubic-bezier(.25,.8,.25,1);transition:all 0.3s cubic-bezier(.25,.8,.25,1);}.card__playerPic.jsx-1936536456{width:100%;min-height:300px;overflow:hidden;position:relative;}.card__playerPic--gradient.jsx-1936536456{z-index:999;height:100%;width:100%;position:absolute;top:0;background:linear-gradient(to top,rgba(255,255,255,1) 0%,rgba(255,255,255,0) 20%);}img.jsx-1936536456{object-fit:cover;object-position:center;width:100%;height:100%;}.card__playerInfoBanner.jsx-1936536456{text-transform:uppercase;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:space-evenly;-webkit-justify-content:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly;width:100%;}.card__logo.jsx-1936536456{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;height:65px;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;position:absolute;bottom:0;z-index:9999;}.card__playerInfoBanner.jsx-1936536456 span.jsx-1936536456{padding:5px 0;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;text-align:center;}.card__playerInfo.jsx-1936536456{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;height:100%;z-index:99999;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:white;text-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9jamdpbHJveS9EZXNrdG9wL0RldmVsb3BtZW50L1JlYWN0L2hvY2tleS1jYXJkcy9jb21wb25lbnRzL0NhcmQuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBV2tCLEFBR3dCLEFBV0YsQUFNQSxBQU9NLEFBTVEsQUFNWixBQVNDLEFBTUQsV0F2Q0ksQ0FNTixDQWpCQyxDQTZDTSxHQXJCSyxPQU5aLENBakJZLEFBNkJWLEdBbEJHLE9BT0UsS0FNUCxJQVpPLElBWGdELEdBd0J0RCxFQU5QLE1BQzhFLEdBUHJGLENBYUEsV0FTYSxBQWVJLFdBZEgsWUFDVSxFQVBPLFFBZWhCLE1BM0NHLGdCQUNFLEVBZ0RQLFVBL0JnRixDQWdDL0UsS0FoREMsT0FpREMsY0FDSSxhQVByQixlQVRxQixHQVNwQixlQVJVLE9BbENjLENBMEJaLENBU0csVUFSZixHQVNBLHlCQWNjLFlBQ3VELDBCQWxEcEIsd0NBbURqRCw4REFsREEiLCJmaWxlIjoiL1VzZXJzL2NqZ2lscm95L0Rlc2t0b3AvRGV2ZWxvcG1lbnQvUmVhY3QvaG9ja2V5LWNhcmRzL2NvbXBvbmVudHMvQ2FyZC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyB1c2VTdGF0ZSwgdXNlRWZmZWN0IH0gZnJvbSAncmVhY3QnXG5pbXBvcnQgcmVzb3VyY2VzIGZyb20gJy4vVGVhbVJlc291cmNlcy5qcydcbmltcG9ydCBMb2dvRURNIGZyb20gJy4uL3N0YXRpYy9sb2dvcy9OSEwtaWNvbnMtRURNLnN2Zyc7XG5pbXBvcnQgX0pTWFN0eWxlIGZyb20gJ3N0eWxlZC1qc3gvc3R5bGUnXG5pbXBvcnQgQ2FyZFRlbXBsYXRlIGZyb20gJy4vQ2FyZFRlbXBsYXRlLmpzJ1xuXG5jb25zdCBDYXJkID0gKHByb3BzKSA9PiB7XG5cbiAgcmV0dXJuIChcbiAgICA8ZGl2IGNsYXNzTmFtZT1cImNhcmRcIj5cbiAgICAgIDxDYXJkVGVtcGxhdGUgcGljVXJsPXtwcm9wcy5waWNVcmx9IHBsYXllckRhdGE9e3Byb3BzLnBsYXllckRhdGF9IG1vcmVEYXRhPXtwcm9wcy5tb3JlRGF0YX0vPlxuICAgICAgPHN0eWxlIGpzeD57YFxuICAgICAgICAuY2FyZCB7XG4gICAgICAgICAgaGVpZ2h0OiAzNTBweDtcbiAgICAgICAgICB3aWR0aDogMjUwcHg7XG4gICAgICAgICAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XG4gICAgICAgICAgYm94LXNoYWRvdzogMCAzcHggNnB4IHJnYmEoMCwwLDAsMC4xNiksIDAgM3B4IDZweCByZ2JhKDAsMCwwLDAuMjMpO1xuICAgICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4zcyBjdWJpYy1iZXppZXIoLjI1LC44LC4yNSwxKTtcbiAgICAgICAgfVxuICAgICAgICAuY2FyZF9fcGxheWVyUGljIHtcbiAgICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgICBtaW4taGVpZ2h0OiAzMDBweDtcbiAgICAgICAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgICAgfVxuICAgICAgICAuY2FyZF9fcGxheWVyUGljLS1ncmFkaWVudCB7XG4gICAgICAgICAgei1pbmRleDo5OTk7XG4gICAgICAgICAgaGVpZ2h0OjEwMCU7XG4gICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICAgIHRvcDowO1xuICAgICAgICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCh0byB0b3AsIHJnYmEoMjU1LDI1NSwyNTUsMSkgMCUscmdiYSgyNTUsMjU1LDI1NSwwKSAyMCUpOyAgICAgICAgfVxuICAgICAgICBpbWcge1xuICAgICAgICAgIG9iamVjdC1maXQ6IGNvdmVyO1xuICAgICAgICAgIG9iamVjdC1wb3NpdGlvbjogY2VudGVyO1xuICAgICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICAgIGhlaWdodDogMTAwJTtcbiAgICAgICAgfVxuICAgICAgICAuY2FyZF9fcGxheWVySW5mb0Jhbm5lcntcbiAgICAgICAgICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xuICAgICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1ldmVubHk7XG4gICAgICAgICAgd2lkdGg6MTAwJTtcbiAgICAgICAgfVxuICAgICAgICAuY2FyZF9fbG9nbyB7XG4gICAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgICBoZWlnaHQ6IDY1cHg7XG4gICAgICAgICAganVzdGlmeS1jb250ZW50OmNlbnRlcjtcbiAgICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgICAgYm90dG9tOjA7XG4gICAgICAgICAgei1pbmRleDogOTk5OTtcbiAgICAgICAgfVxuICAgICAgICAuY2FyZF9fcGxheWVySW5mb0Jhbm5lciBzcGFuIHtcbiAgICAgICAgICBwYWRkaW5nOiA1cHggMDtcbiAgICAgICAgICBhbGlnbi1pdGVtczpjZW50ZXI7XG4gICAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgICB0ZXh0LWFsaWduOmNlbnRlclxuICAgICAgICB9XG4gICAgICAgIC5jYXJkX19wbGF5ZXJJbmZvIHtcbiAgICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICAgIGZsZXgtd3JhcDogd3JhcDtcbiAgICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICAgICAgei1pbmRleDogOTk5OTk7XG4gICAgICAgICAgYWxpZ24taXRlbXM6Y2VudGVyO1xuICAgICAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICAgICAgICB0ZXh0LXNoYWRvdzogMCAxcHggM3B4IHJnYmEoMCwwLDAsMC4xMiksIDAgMXB4IDJweCByZ2JhKDAsMCwwLDAuMjQpO1xuICAgICAgICB9XG4gICAgICBgfTwvc3R5bGU+XG4gICAgPC9kaXY+XG4gIClcbn1cblxuZXhwb3J0IGRlZmF1bHQgQ2FyZFxuIl19 */\n/*@ sourceURL=/Users/cjgilroy/Desktop/Development/React/hockey-cards/components/Card.js */"));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Card);
+
+/***/ }),
+
+/***/ "./components/CardTemplate.js":
+/*!************************************!*\
+  !*** ./components/CardTemplate.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _TeamResources_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TeamResources.js */ "./components/TeamResources.js");
+var _jsxFileName = "/Users/cjgilroy/Desktop/Development/React/hockey-cards/components/CardTemplate.js";
+
+
+
+var outputCard = function outputCard(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 250 350",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 6
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "jsx-1936536456" + " " + "card__playerInfo",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("filter", {
+    id: "filter",
+    x: "-20%",
+    y: "-20%",
+    width: "140%",
+    height: "140%",
+    filterUnits: "objectBoundingBox",
+    primitiveUnits: "userSpaceOnUse",
+    "color-interpolation-filters": "linearRGB",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 7
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    style: {
-      boxShadow: '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)',
-      backgroundColor: _TeamResources_js__WEBPACK_IMPORTED_MODULE_2__["default"][props.playerData.teamID].primaryColor
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("feTurbulence", {
+    type: "fractalNoise",
+    baseFrequency: "0.1 0.1",
+    numOctaves: "10",
+    seed: "4",
+    stitchTiles: "stitch",
+    x: "0%",
+    y: "0%",
+    width: "100%",
+    height: "100%",
+    result: "turbulence2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
     },
-    className: "jsx-1936536456" + " " + "card__playerInfoBanner",
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("feColorMatrix", {
+    type: "matrix",
+    values: "0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0.6",
+    x: "0%",
+    y: "0%",
+    width: "100%",
+    height: "100%",
+    in: "turbulence2",
+    result: "colormatrix",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("feComposite", {
+    in: "SourceGraphic",
+    in2: "colormatrix",
+    operator: "in",
+    x: "0%",
+    y: "0%",
+    width: "100%",
+    height: "100%",
+    result: "composite1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("defs", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "jsx-1936536456",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("clipPath", {
+    id: "clip-path",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16
     },
     __self: this
-  }, "#", props.playerData.number), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "jsx-1936536456",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    id: "clipPath",
+    d: "M192.73,343.83a39.11,39.11,0,0,1,37.56-68.62V68a12,12,0,0,0-12-12H16.69a12,12,0,0,0-12,12V331.83a12,12,0,0,0,12,12Z",
+    style: {
+      fill: 'none',
+      stroke: '#fff',
+      strokeMiterLimit: '10px'
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 16
     },
     __self: this
-  }, "|"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "jsx-1936536456",
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 18
     },
     __self: this
-  }, props.playerData.name), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "jsx-1936536456",
+  }, "card-template"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("rect", {
+    filter: "url(#filter)",
+    height: "350",
+    width: "250",
+    fill: _TeamResources_js__WEBPACK_IMPORTED_MODULE_1__["default"][props.playerData.teamID].primaryColor,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19
     },
     __self: this
-  }, "|"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-    className: "jsx-1936536456",
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+    id: "playerInfo",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 20
     },
     __self: this
-  }, props.playerData.position))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "jsx-1936536456" + " " + "card__logo",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     style: {
-      width: '170px',
-      height: "100px"
+      clipPath: 'url(#clip-path)'
     },
-    className: "jsx-1936536456",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 21
     },
     __self: this
-  }, _TeamResources_js__WEBPACK_IMPORTED_MODULE_2__["default"][props.playerData.teamID].logo)), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    id: "1936536456",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("image", {
+    x: "5",
+    y: "55",
+    width: "250",
+    height: "250",
+    preserveAspectRatio: "xMidYMid slice",
+    xlinkHref: props.picUrl,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
     __self: this
-  }, ".card.jsx-1936536456{height:350px;width:250px;font-family:sans-serif;box-shadow:0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23);overflow:hidden;position:relative;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-transition:all 0.3s cubic-bezier(.25,.8,.25,1);transition:all 0.3s cubic-bezier(.25,.8,.25,1);}.card__playerPic.jsx-1936536456{width:100%;min-height:300px;overflow:hidden;position:relative;}.card__playerPic--gradient.jsx-1936536456{z-index:999;height:100%;width:100%;position:absolute;top:0;background:linear-gradient(to top,rgba(255,255,255,1) 0%,rgba(255,255,255,0) 20%);}img.jsx-1936536456{object-fit:cover;object-position:center;width:100%;height:100%;}.card__playerInfoBanner.jsx-1936536456{text-transform:uppercase;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:space-evenly;-webkit-justify-content:space-evenly;-ms-flex-pack:space-evenly;justify-content:space-evenly;width:100%;}.card__logo.jsx-1936536456{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;width:100%;height:65px;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;position:absolute;bottom:0;z-index:9999;}.card__playerInfoBanner.jsx-1936536456 span.jsx-1936536456{padding:5px 0;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;text-align:center;}.card__playerInfo.jsx-1936536456{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;height:100%;z-index:99999;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:white;text-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9jamdpbHJveS9EZXNrdG9wL0RldmVsb3BtZW50L1JlYWN0L2hvY2tleS1jYXJkcy9jb21wb25lbnRzL0NhcmQuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBeUJrQixBQUd3QixBQVdGLEFBTUEsQUFPTSxBQU1RLEFBTVosQUFTQyxBQU1ELFdBdkNJLENBTU4sQ0FqQkMsQ0E2Q00sR0FyQkssT0FOWixDQWpCWSxBQTZCVixHQWxCRyxPQU9FLEtBTVAsSUFaTyxJQVhnRCxHQXdCdEQsRUFOUCxNQUM4RSxHQVByRixDQWFBLFdBU2EsQUFlSSxXQWRILFlBQ1UsRUFQTyxRQWVoQixNQTNDRyxnQkFDRSxFQWdEUCxVQS9CZ0YsQ0FnQy9FLEtBaERDLE9BaURDLGNBQ0ksYUFQckIsZUFUcUIsR0FTcEIsZUFSVSxPQWxDYyxDQTBCWixDQVNHLFVBUmYsR0FTQSx5QkFjYyxZQUN1RCwwQkFsRHBCLHdDQW1EakQsOERBbERBIiwiZmlsZSI6Ii9Vc2Vycy9jamdpbHJveS9EZXNrdG9wL0RldmVsb3BtZW50L1JlYWN0L2hvY2tleS1jYXJkcy9jb21wb25lbnRzL0NhcmQuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgdXNlU3RhdGUsIHVzZUVmZmVjdCB9IGZyb20gJ3JlYWN0J1xuaW1wb3J0IHJlc291cmNlcyBmcm9tICcuL1RlYW1SZXNvdXJjZXMuanMnXG5pbXBvcnQgTG9nb0VETSBmcm9tICcuLi9zdGF0aWMvbG9nb3MvTkhMLWljb25zLUVETS5zdmcnO1xuaW1wb3J0IF9KU1hTdHlsZSBmcm9tICdzdHlsZWQtanN4L3N0eWxlJ1xuXG5jb25zdCBDYXJkID0gKHByb3BzKSA9PiB7XG5cbiAgcmV0dXJuIChcbiAgICA8ZGl2IGNsYXNzTmFtZT1cImNhcmRcIj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY2FyZF9fcGxheWVyUGljXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY2FyZF9fcGxheWVyUGljLS1ncmFkaWVudFwiPjwvZGl2PlxuICAgICAgICA8aW1nIHNyYz17cHJvcHMucGljVXJsfSAvPlxuICAgICAgPC9kaXY+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImNhcmRfX3BsYXllckluZm9cIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjYXJkX19wbGF5ZXJJbmZvQmFubmVyXCIgc3R5bGU9e3tib3hTaGFkb3c6ICcwIDFweCAzcHggcmdiYSgwLDAsMCwwLjEyKSwgMCAxcHggMnB4IHJnYmEoMCwwLDAsMC4yNCknLGJhY2tncm91bmRDb2xvcjpyZXNvdXJjZXNbcHJvcHMucGxheWVyRGF0YS50ZWFtSURdLnByaW1hcnlDb2xvcn19PlxuICAgICAgICAgIDxzcGFuPiN7cHJvcHMucGxheWVyRGF0YS5udW1iZXJ9PC9zcGFuPlxuICAgICAgICAgIDxzcGFuPnw8L3NwYW4+XG4gICAgICAgICAgPHNwYW4+e3Byb3BzLnBsYXllckRhdGEubmFtZX08L3NwYW4+XG4gICAgICAgICAgPHNwYW4+fDwvc3Bhbj5cbiAgICAgICAgICA8c3Bhbj57cHJvcHMucGxheWVyRGF0YS5wb3NpdGlvbn08L3NwYW4+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9kaXY+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImNhcmRfX2xvZ29cIj5cbiAgICAgICAgPGRpdiBzdHlsZT17e3dpZHRoOicxNzBweCcsaGVpZ2h0OlwiMTAwcHhcIn19PntyZXNvdXJjZXNbcHJvcHMucGxheWVyRGF0YS50ZWFtSURdLmxvZ299PC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICAgIDxzdHlsZSBqc3g+e2BcbiAgICAgICAgLmNhcmQge1xuICAgICAgICAgIGhlaWdodDogMzUwcHg7XG4gICAgICAgICAgd2lkdGg6IDI1MHB4O1xuICAgICAgICAgIGZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmO1xuICAgICAgICAgIGJveC1zaGFkb3c6IDAgM3B4IDZweCByZ2JhKDAsMCwwLDAuMTYpLCAwIDNweCA2cHggcmdiYSgwLDAsMCwwLjIzKTtcbiAgICAgICAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuM3MgY3ViaWMtYmV6aWVyKC4yNSwuOCwuMjUsMSk7XG4gICAgICAgIH1cbiAgICAgICAgLmNhcmRfX3BsYXllclBpYyB7XG4gICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgICAgbWluLWhlaWdodDogMzAwcHg7XG4gICAgICAgICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgIH1cbiAgICAgICAgLmNhcmRfX3BsYXllclBpYy0tZ3JhZGllbnQge1xuICAgICAgICAgIHotaW5kZXg6OTk5O1xuICAgICAgICAgIGhlaWdodDoxMDAlO1xuICAgICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgICB0b3A6MDtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gdG9wLCByZ2JhKDI1NSwyNTUsMjU1LDEpIDAlLHJnYmEoMjU1LDI1NSwyNTUsMCkgMjAlKTsgICAgICAgIH1cbiAgICAgICAgaW1nIHtcbiAgICAgICAgICBvYmplY3QtZml0OiBjb3ZlcjtcbiAgICAgICAgICBvYmplY3QtcG9zaXRpb246IGNlbnRlcjtcbiAgICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICAgIH1cbiAgICAgICAgLmNhcmRfX3BsYXllckluZm9CYW5uZXJ7XG4gICAgICAgICAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbiAgICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtZXZlbmx5O1xuICAgICAgICAgIHdpZHRoOjEwMCU7XG4gICAgICAgIH1cbiAgICAgICAgLmNhcmRfX2xvZ28ge1xuICAgICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgICAgaGVpZ2h0OiA2NXB4O1xuICAgICAgICAgIGp1c3RpZnktY29udGVudDpjZW50ZXI7XG4gICAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICAgIGJvdHRvbTowO1xuICAgICAgICAgIHotaW5kZXg6IDk5OTk7XG4gICAgICAgIH1cbiAgICAgICAgLmNhcmRfX3BsYXllckluZm9CYW5uZXIgc3BhbiB7XG4gICAgICAgICAgcGFkZGluZzogNXB4IDA7XG4gICAgICAgICAgYWxpZ24taXRlbXM6Y2VudGVyO1xuICAgICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgICAgdGV4dC1hbGlnbjpjZW50ZXJcbiAgICAgICAgfVxuICAgICAgICAuY2FyZF9fcGxheWVySW5mbyB7XG4gICAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgICBmbGV4LXdyYXA6IHdyYXA7XG4gICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgICAgaGVpZ2h0OiAxMDAlO1xuICAgICAgICAgIHotaW5kZXg6IDk5OTk5O1xuICAgICAgICAgIGFsaWduLWl0ZW1zOmNlbnRlcjtcbiAgICAgICAgICBjb2xvcjogd2hpdGU7XG4gICAgICAgICAgdGV4dC1zaGFkb3c6IDAgMXB4IDNweCByZ2JhKDAsMCwwLDAuMTIpLCAwIDFweCAycHggcmdiYSgwLDAsMCwwLjI0KTtcbiAgICAgICAgfVxuICAgICAgYH08L3N0eWxlPlxuICAgIDwvZGl2PlxuICApXG59XG5cbmV4cG9ydCBkZWZhdWx0IENhcmRcbiJdfQ== */\n/*@ sourceURL=/Users/cjgilroy/Desktop/Development/React/hockey-cards/components/Card.js */"));
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("rect", {
+    transform: "translate(0 300)",
+    width: "200px",
+    height: "70px",
+    style: {
+      fill: '#f7f5e8'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+    transform: "translate(15 317)",
+    style: {
+      fontSize: '13px',
+      fontFamily: 'Arial-BoldMT, Arial',
+      fontWeight: '700'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, props.moreData[0].firstName.toUpperCase())), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+    fill: "#e54f4a",
+    transform: "translate(15 335)",
+    style: {
+      fontSize: '18px',
+      fontFamily: 'Arial-BoldMT, Arial',
+      fontWeight: '700'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }, props.moreData[0].lastName.toUpperCase())))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    id: "clipPath-2",
+    "data-name": "clipPath",
+    d: "M192.73,343.83a39.11,39.11,0,0,1,37.56-68.62V68a12,12,0,0,0-12-12H16.69a12,12,0,0,0-12,12V331.83a12,12,0,0,0,12,12Z",
+    style: {
+      fill: 'none',
+      stroke: '#f3bc52',
+      strokeMiterLimit: '10px'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    id: "dataBackground",
+    d: "M245.49,309.94a32.88,32.88,0,1,1-9.14-22.75V69.08s-.24-21.78-22-21.78h-192S4.69,47.39,4.69,29.87V6.69H14c0,15.12,15.28,15.09,15.28,15.09H225.36c19.91,0,20.13,19.88,20.13,19.88V309.94",
+    style: {
+      fill: '#f7f5e8',
+      stroke: '#000',
+      strokeMiterLimit: '10px'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+    id: "data",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+    transform: "translate(25 39.74)",
+    style: {
+      fontSize: '15px',
+      fontFamily: 'Arial-BoldItalicMT, Arial',
+      fontWeight: '700',
+      fontStyle: 'italic'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
+    textLength: "195",
+    style: {
+      fill: '#e54f4a'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: this
+  }, _TeamResources_js__WEBPACK_IMPORTED_MODULE_1__["default"][props.playerData.teamID].teamName.toUpperCase())), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
+    id: "logo",
+    transform: "translate(88 286)",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    height: "47px",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: this
+  }, _TeamResources_js__WEBPACK_IMPORTED_MODULE_1__["default"][props.playerData.teamID].logo)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
+    transform: "translate(20 15)",
+    style: {
+      fontSize: '13px',
+      fontFamily: 'Arial-BoldMT, Arial',
+      fontWeight: '700'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
+    fill: "#fff",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
+    },
+    __self: this
+  }, "#", props.playerData.number), "\xB7", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: this
+  }, props.playerData.position))))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Card);
+/* harmony default export */ __webpack_exports__["default"] = (outputCard);
 
 /***/ }),
 
@@ -820,6 +1056,7 @@ function Deck(props) {
     }), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_Card_js__WEBPACK_IMPORTED_MODULE_7__["default"], {
       picUrl: props.cards[i].src,
       playerData: props.playerData[i],
+      moreData: props.moreData[i],
       __source: {
         fileName: _jsxFileName,
         lineNumber: 76
@@ -869,6 +1106,7 @@ var PlayerPicker = function PlayerPicker(props) {
   Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
     var picPromises = [];
     var playerData = [];
+    var playerPromises = [];
     outputPlayers.map(function (index) {
       // let actionShot = "https://nhl.bamcontent.com/images/actionshots/" + player.person.id + ".jpg"
       // let headShot = "https://nhl.bamcontent.com/images/headshots/current/168x168/"+player.person.id+".jpg"
@@ -895,22 +1133,29 @@ var PlayerPicker = function PlayerPicker(props) {
 
         img.src = "https://nhl.bamcontent.com/images/actionshots/" + props.playerList[index].person.id + ".jpg";
       }));
+      playerPromises.push(fetch('https://statsapi.web.nhl.com' + props.playerList[index].person.link).then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        return json.people;
+      }));
     });
 
     _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_0___default.a.all(picPromises).then(function (cards) {
-      setCards(react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_Deck_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
-        cards: cards,
-        playerData: playerData,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 35
-        },
-        __self: this
-      }));
-      props.doneLoad();
+      _babel_runtime_corejs2_core_js_promise__WEBPACK_IMPORTED_MODULE_0___default.a.all(playerPromises).then(function (json) {
+        setCards(react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_Deck_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          cards: cards,
+          playerData: playerData,
+          moreData: json,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 39
+          },
+          __self: this
+        }));
+        props.doneLoad();
+      });
     });
   }, []);
-  console.log('outputPlayers', cards);
   return cards;
 };
 
