@@ -11,15 +11,12 @@ export default function App() {
   const [isLoading, updateIsLoading] = useState(false)
   const [cardsContainer, updateCardsContainer] = useState()
   const loadPack = () => {
-    console.log('loadPack')
     updateIsLoading(true)
     updateButtonState('')
     updateCardsContainer(<CardsContainer doneLoad={doneLoad}/>)
-    console.log('immediatecardcont',cardsContainer)
   }
 
   const doneLoad = () => {
-    console.log('doneLoad')
     updateIsLoading(false)
     updatePack('open')
   }
@@ -27,7 +24,6 @@ export default function App() {
   const reset = () => {
     updateIsLoading(false)
     updatePack('closed')
-    console.log(packState)
     updateShowPack(true)
     updateShowCards(false)
     updateCardsContainer('')
@@ -35,15 +31,12 @@ export default function App() {
   }
 
   const doneAnimation = (e) => {
-    console.log('doneAnimation',e.target)
     updateShowCards(true)
     updateButtonState('reset')
     // updateShowPack(false)
   }
-  console.log('render-app',showCards)
   const button = () => {
 
-    console.log(buttonState)
     let buttonStyle = (
       <style jsx>{`
       .btn {
@@ -60,8 +53,20 @@ export default function App() {
         z-index: 99999;
         background-color: #2ecc71;
         color: #ecf0f1;
-
+        animation: pulse 1s infinite;
         transition: background-color .3s;
+      }
+      @keyframes pulse
+      {
+           0% {
+                transform: scale(1)
+           }
+           50% {
+                transform: scale(1.1)
+           }
+           100% {
+                transform: scale(1)
+           }
       }
 
       .btn:hover, .btn:focus {
@@ -115,6 +120,7 @@ export default function App() {
           justify-content: center;
           align-items: center;
           margin-top: 10px;
+          animation: none;
         }
         `}
       </style>
@@ -142,7 +148,7 @@ export default function App() {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: #ccc;
+          background: lightblue;
           position: relative;
           overflow: hidden;
         }

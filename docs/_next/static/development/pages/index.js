@@ -56,22 +56,19 @@ function App() {
       updateCardsContainer = _useState12[1];
 
   var loadPack = function loadPack() {
-    console.log('loadPack');
     updateIsLoading(true);
     updateButtonState('');
     updateCardsContainer(react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_CardsContainer_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
       doneLoad: doneLoad,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17
+        lineNumber: 16
       },
       __self: this
     }));
-    console.log('immediatecardcont', cardsContainer);
   };
 
   var doneLoad = function doneLoad() {
-    console.log('doneLoad');
     updateIsLoading(false);
     updatePack('open');
   };
@@ -79,7 +76,6 @@ function App() {
   var reset = function reset() {
     updateIsLoading(false);
     updatePack('closed');
-    console.log(packState);
     updateShowPack(true);
     updateShowCards(false);
     updateCardsContainer('');
@@ -87,31 +83,27 @@ function App() {
   };
 
   var doneAnimation = function doneAnimation(e) {
-    console.log('doneAnimation', e.target);
     updateShowCards(true);
     updateButtonState('reset'); // updateShowPack(false)
   };
 
-  console.log('render-app', showCards);
-
   var button = function button() {
-    console.log(buttonState);
     var buttonStyle = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("style", {
       jsx: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 41
       },
       __self: this
-    }, "\n      .btn {\n        position: relative;\n        display: block;\n        padding: 0;\n        cursor: pointer;\n        overflow: hidden;\n        min-width: 80px;\n        border-width: 0;\n        outline: none;\n        border-radius: 2px;\n        box-shadow: 0 1px 4px rgba(0, 0, 0, .6);\n        z-index: 99999;\n        background-color: #2ecc71;\n        color: #ecf0f1;\n\n        transition: background-color .3s;\n      }\n\n      .btn:hover, .btn:focus {\n        background-color: #27ae60;\n      }\n\n      .btn > * {\n        position: relative;\n      }\n\n      .btn span {\n        display: block;\n        padding: 12px 24px;\n      }\n\n      .btn:before {\n        content: \"\";\n\n        position: absolute;\n        top: 50%;\n        left: 50%;\n\n        display: block;\n        width: 0;\n        padding-top: 0;\n\n        border-radius: 100%;\n\n        background-color: rgba(236, 240, 241, .3);\n\n        -webkit-transform: translate(-50%, -50%);\n        -moz-transform: translate(-50%, -50%);\n        -ms-transform: translate(-50%, -50%);\n        -o-transform: translate(-50%, -50%);\n        transform: translate(-50%, -50%);\n      }\n\n      .btn:active:before {\n        width: 120%;\n        padding-top: 120%;\n\n        transition: width .2s ease-out, padding-top .2s ease-out;\n      }\n      ");
+    }, "\n      .btn {\n        position: relative;\n        display: block;\n        padding: 0;\n        cursor: pointer;\n        overflow: hidden;\n        min-width: 80px;\n        border-width: 0;\n        outline: none;\n        border-radius: 2px;\n        box-shadow: 0 1px 4px rgba(0, 0, 0, .6);\n        z-index: 99999;\n        background-color: #2ecc71;\n        color: #ecf0f1;\n        animation: pulse 1s infinite;\n        transition: background-color .3s;\n      }\n      @keyframes pulse\n      {\n           0% {\n                transform: scale(1)\n           }\n           50% {\n                transform: scale(1.1)\n           }\n           100% {\n                transform: scale(1)\n           }\n      }\n\n      .btn:hover, .btn:focus {\n        background-color: #27ae60;\n      }\n\n      .btn > * {\n        position: relative;\n      }\n\n      .btn span {\n        display: block;\n        padding: 12px 24px;\n      }\n\n      .btn:before {\n        content: \"\";\n\n        position: absolute;\n        top: 50%;\n        left: 50%;\n\n        display: block;\n        width: 0;\n        padding-top: 0;\n\n        border-radius: 100%;\n\n        background-color: rgba(236, 240, 241, .3);\n\n        -webkit-transform: translate(-50%, -50%);\n        -moz-transform: translate(-50%, -50%);\n        -ms-transform: translate(-50%, -50%);\n        -o-transform: translate(-50%, -50%);\n        transform: translate(-50%, -50%);\n      }\n\n      .btn:active:before {\n        width: 120%;\n        padding-top: 120%;\n\n        transition: width .2s ease-out, padding-top .2s ease-out;\n      }\n      ");
     var resetStyle = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("style", {
       jsx: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 111
+        lineNumber: 116
       },
       __self: this
-    }, "\n        .btn {\n          top: 0;\n          position: absolute;\n          justify-content: center;\n          align-items: center;\n          margin-top: 10px;\n        }\n        ");
+    }, "\n        .btn {\n          top: 0;\n          position: absolute;\n          justify-content: center;\n          align-items: center;\n          margin-top: 10px;\n          animation: none;\n        }\n        ");
 
     if (buttonState === 'open') {
       return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -119,13 +111,13 @@ function App() {
         onClick: loadPack,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 123
+          lineNumber: 129
         },
         __self: this
       }, buttonStyle, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 123
+          lineNumber: 129
         },
         __self: this
       }, "OPEN"));
@@ -135,13 +127,13 @@ function App() {
         onClick: reset,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 125
+          lineNumber: 131
         },
         __self: this
       }, buttonStyle, resetStyle, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 125
+          lineNumber: 131
         },
         __self: this
       }, "RESET"));
@@ -157,25 +149,25 @@ function App() {
     display: 'none'
   };
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "jsx-487912447" + " " + "app-container",
+    className: "jsx-1706532751" + " " + "app-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 139
     },
     __self: this
   }, button(), isLoading && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    className: "jsx-487912447" + " " + "loading",
+    className: "jsx-1706532751" + " " + "loading",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 141
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     style: displayCards,
-    className: "jsx-487912447",
+    className: "jsx-1706532751",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 142
     },
     __self: this
   }, cardsContainer), showPack && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_ClosedPack_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -183,13 +175,13 @@ function App() {
     doneAnimation: doneAnimation,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 143
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    id: "487912447",
+    id: "1706532751",
     __self: this
-  }, ".app-container.jsx-487912447{width:100vw;height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background:#ccc;position:relative;overflow:hidden;}.buttonRow.jsx-487912447{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}.loading.jsx-487912447{height:8px;width:200px;position:relative;overflow:hidden;background-color:#ddd;z-index:999;border:1px solid #eee;}.loading.jsx-487912447:before{display:block;position:absolute;content:\"\";left:-200px;width:20px;height:8px;background-color:#2980b9;-webkit-animation:loading-jsx-487912447 2s linear infinite;animation:loading-jsx-487912447 2s linear infinite;}@-webkit-keyframes loading-jsx-487912447{from{left:-20px;width:30%;}50%{width:30%;}70%{width:70%;}80%{left:50%;}95%{left:120%;}to{left:100%;}}@keyframes loading-jsx-487912447{from{left:-20px;width:30%;}50%{width:30%;}70%{width:70%;}80%{left:50%;}95%{left:120%;}to{left:100%;}}@-webkit-keyframes spin-jsx-487912447{0%{-webkit-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg);}100%{-webkit-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}@keyframes spin-jsx-487912447{0%{-webkit-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg);}100%{-webkit-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9jamdpbHJveS9EZXNrdG9wL0RldmVsb3BtZW50L1JlYWN0L2hvY2tleS1jYXJkcy9jb21wb25lbnRzL0FwcC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUF5SWtCLEFBR3VCLEFBVUQsQUFNQSxBQVNHLEFBV0ksQUFDRixBQUNBLEFBQ0EsQUFDQSxBQUNELEFBSVUsQUFHRSxTQVRWLENBRkEsQUFDQSxBQUVBLEFBQ0QsQ0E5QkgsQUFNRCxBQW1CaUIsQ0FuQ2hCLEVBeUJLLE9BVVksRUFsQlosRUFoQkwsT0F5QkYsU0FSSyxFQVNKLFlBQ0QsRUFUVyxTQVVYLFdBQ2MsRUFWYixFQXlCWixJQWpDRixFQW9DRSxJQTFCSCxRQXBCc0IsR0E2QmtCLFdBVHZDLCtFQW5CeUIsb0JBNkJ6QiwrRUE1QmtCLGdCQUNFLGtCQUNGLGdCQUNsQiIsImZpbGUiOiIvVXNlcnMvY2pnaWxyb3kvRGVza3RvcC9EZXZlbG9wbWVudC9SZWFjdC9ob2NrZXktY2FyZHMvY29tcG9uZW50cy9BcHAuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgQ2FyZHNDb250YWluZXIgZnJvbSAnLi9DYXJkc0NvbnRhaW5lci5qcydcbmltcG9ydCBDbG9zZWRQYWNrIGZyb20gJy4vQ2xvc2VkUGFjay5qcydcbmltcG9ydCBfSlNYU3R5bGUgZnJvbSAnc3R5bGVkLWpzeC9zdHlsZSdcbmltcG9ydCB7dXNlU3RhdGUsdXNlRWZmZWN0fSBmcm9tICdyZWFjdCdcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gQXBwKCkge1xuICBjb25zdCBbcGFja1N0YXRlLCB1cGRhdGVQYWNrXSA9IHVzZVN0YXRlKCdjbG9zZWQnKVxuICBjb25zdCBbYnV0dG9uU3RhdGUsIHVwZGF0ZUJ1dHRvblN0YXRlXSA9IHVzZVN0YXRlKCdvcGVuJylcbiAgY29uc3QgW3Nob3dQYWNrLCB1cGRhdGVTaG93UGFja10gPSB1c2VTdGF0ZSh0cnVlKVxuICBjb25zdCBbc2hvd0NhcmRzLCB1cGRhdGVTaG93Q2FyZHNdID0gdXNlU3RhdGUoZmFsc2UpXG4gIGNvbnN0IFtpc0xvYWRpbmcsIHVwZGF0ZUlzTG9hZGluZ10gPSB1c2VTdGF0ZShmYWxzZSlcbiAgY29uc3QgW2NhcmRzQ29udGFpbmVyLCB1cGRhdGVDYXJkc0NvbnRhaW5lcl0gPSB1c2VTdGF0ZSgpXG4gIGNvbnN0IGxvYWRQYWNrID0gKCkgPT4ge1xuICAgIGNvbnNvbGUubG9nKCdsb2FkUGFjaycpXG4gICAgdXBkYXRlSXNMb2FkaW5nKHRydWUpXG4gICAgdXBkYXRlQnV0dG9uU3RhdGUoJycpXG4gICAgdXBkYXRlQ2FyZHNDb250YWluZXIoPENhcmRzQ29udGFpbmVyIGRvbmVMb2FkPXtkb25lTG9hZH0vPilcbiAgICBjb25zb2xlLmxvZygnaW1tZWRpYXRlY2FyZGNvbnQnLGNhcmRzQ29udGFpbmVyKVxuICB9XG5cbiAgY29uc3QgZG9uZUxvYWQgPSAoKSA9PiB7XG4gICAgY29uc29sZS5sb2coJ2RvbmVMb2FkJylcbiAgICB1cGRhdGVJc0xvYWRpbmcoZmFsc2UpXG4gICAgdXBkYXRlUGFjaygnb3BlbicpXG4gIH1cblxuICBjb25zdCByZXNldCA9ICgpID0+IHtcbiAgICB1cGRhdGVJc0xvYWRpbmcoZmFsc2UpXG4gICAgdXBkYXRlUGFjaygnY2xvc2VkJylcbiAgICBjb25zb2xlLmxvZyhwYWNrU3RhdGUpXG4gICAgdXBkYXRlU2hvd1BhY2sodHJ1ZSlcbiAgICB1cGRhdGVTaG93Q2FyZHMoZmFsc2UpXG4gICAgdXBkYXRlQ2FyZHNDb250YWluZXIoJycpXG4gICAgdXBkYXRlQnV0dG9uU3RhdGUoJ29wZW4nKVxuICB9XG5cbiAgY29uc3QgZG9uZUFuaW1hdGlvbiA9IChlKSA9PiB7XG4gICAgY29uc29sZS5sb2coJ2RvbmVBbmltYXRpb24nLGUudGFyZ2V0KVxuICAgIHVwZGF0ZVNob3dDYXJkcyh0cnVlKVxuICAgIHVwZGF0ZUJ1dHRvblN0YXRlKCdyZXNldCcpXG4gICAgLy8gdXBkYXRlU2hvd1BhY2soZmFsc2UpXG4gIH1cbiAgY29uc29sZS5sb2coJ3JlbmRlci1hcHAnLHNob3dDYXJkcylcbiAgY29uc3QgYnV0dG9uID0gKCkgPT4ge1xuXG4gICAgY29uc29sZS5sb2coYnV0dG9uU3RhdGUpXG4gICAgbGV0IGJ1dHRvblN0eWxlID0gKFxuICAgICAgPHN0eWxlIGpzeD57YFxuICAgICAgLmJ0biB7XG4gICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgICAgZGlzcGxheTogYmxvY2s7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICAgICAgbWluLXdpZHRoOiA4MHB4O1xuICAgICAgICBib3JkZXItd2lkdGg6IDA7XG4gICAgICAgIG91dGxpbmU6IG5vbmU7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDJweDtcbiAgICAgICAgYm94LXNoYWRvdzogMCAxcHggNHB4IHJnYmEoMCwgMCwgMCwgLjYpO1xuICAgICAgICB6LWluZGV4OiA5OTk5OTtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzJlY2M3MTtcbiAgICAgICAgY29sb3I6ICNlY2YwZjE7XG5cbiAgICAgICAgdHJhbnNpdGlvbjogYmFja2dyb3VuZC1jb2xvciAuM3M7XG4gICAgICB9XG5cbiAgICAgIC5idG46aG92ZXIsIC5idG46Zm9jdXMge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMjdhZTYwO1xuICAgICAgfVxuXG4gICAgICAuYnRuID4gKiB7XG4gICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgIH1cblxuICAgICAgLmJ0biBzcGFuIHtcbiAgICAgICAgZGlzcGxheTogYmxvY2s7XG4gICAgICAgIHBhZGRpbmc6IDEycHggMjRweDtcbiAgICAgIH1cblxuICAgICAgLmJ0bjpiZWZvcmUge1xuICAgICAgICBjb250ZW50OiBcIlwiO1xuXG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgdG9wOiA1MCU7XG4gICAgICAgIGxlZnQ6IDUwJTtcblxuICAgICAgICBkaXNwbGF5OiBibG9jaztcbiAgICAgICAgd2lkdGg6IDA7XG4gICAgICAgIHBhZGRpbmctdG9wOiAwO1xuXG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDEwMCU7XG5cbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogcmdiYSgyMzYsIDI0MCwgMjQxLCAuMyk7XG5cbiAgICAgICAgLXdlYmtpdC10cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICAgICAgLW1vei10cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICAgICAgLW1zLXRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgICAgICAtby10cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgICB9XG5cbiAgICAgIC5idG46YWN0aXZlOmJlZm9yZSB7XG4gICAgICAgIHdpZHRoOiAxMjAlO1xuICAgICAgICBwYWRkaW5nLXRvcDogMTIwJTtcblxuICAgICAgICB0cmFuc2l0aW9uOiB3aWR0aCAuMnMgZWFzZS1vdXQsIHBhZGRpbmctdG9wIC4ycyBlYXNlLW91dDtcbiAgICAgIH1cbiAgICAgIGB9PC9zdHlsZT5cbiAgICApXG4gICAgbGV0IHJlc2V0U3R5bGUgPSAoXG4gICAgICA8c3R5bGUganN4PntgXG4gICAgICAgIC5idG4ge1xuICAgICAgICAgIHRvcDogMDtcbiAgICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAgICBtYXJnaW4tdG9wOiAxMHB4O1xuICAgICAgICB9XG4gICAgICAgIGB9XG4gICAgICA8L3N0eWxlPlxuICAgIClcbiAgICBpZiAoYnV0dG9uU3RhdGUgPT09ICdvcGVuJykge1xuICAgICAgcmV0dXJuIDxkaXYgY2xhc3NOYW1lPVwiYnV0dG9uUm93X19idXR0b24gYnRuXCIgb25DbGljaz17bG9hZFBhY2t9ID57YnV0dG9uU3R5bGV9PHNwYW4+T1BFTjwvc3Bhbj48L2Rpdj5cbiAgICB9IGVsc2UgaWYgKGJ1dHRvblN0YXRlID09PSAncmVzZXQnKSB7XG4gICAgICByZXR1cm4gPGRpdiBjbGFzc05hbWU9XCJidXR0b25Sb3dfX2J1dHRvbiBidG5cIiBvbkNsaWNrPXtyZXNldH0gPntidXR0b25TdHlsZX17cmVzZXRTdHlsZX08c3Bhbj5SRVNFVDwvc3Bhbj48L2Rpdj5cbiAgICB9IGVsc2Uge1xuICAgICAgcmV0dXJuICcnXG4gICAgfVxuICB9XG4gIGxldCBkaXNwbGF5Q2FyZHMgPSBzaG93Q2FyZHMgPyB7aGVpZ2h0OicxMDAlJyx3aWR0aDonMTAwJSd9IDoge2Rpc3BsYXk6J25vbmUnfVxuXG4gIHJldHVybiAoXG4gICAgPGRpdiBjbGFzc05hbWU9XCJhcHAtY29udGFpbmVyXCI+XG4gICAgICB7YnV0dG9uKCl9XG4gICAgICB7aXNMb2FkaW5nICYmIDxkaXYgY2xhc3NOYW1lPVwibG9hZGluZ1wiPjwvZGl2Pn1cbiAgICAgIDxkaXYgc3R5bGU9e2Rpc3BsYXlDYXJkc30+e2NhcmRzQ29udGFpbmVyfTwvZGl2PlxuICAgICAge3Nob3dQYWNrICYmIDxDbG9zZWRQYWNrIHBhY2tTdGF0ZT17cGFja1N0YXRlfSBkb25lQW5pbWF0aW9uPXtkb25lQW5pbWF0aW9ufS8+fVxuICAgICAgPHN0eWxlIGpzeD57YFxuICAgICAgICAuYXBwLWNvbnRhaW5lciB7XG4gICAgICAgICAgd2lkdGg6IDEwMHZ3O1xuICAgICAgICAgIGhlaWdodDogMTAwdmg7XG4gICAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICAgIGJhY2tncm91bmQ6ICNjY2M7XG4gICAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgIH1cbiAgICAgICAgLmJ1dHRvblJvdyB7XG4gICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgICAgZGlzcGxheTogZmxleDtcblxuICAgICAgICB9XG5cbiAgICAgICAgLmxvYWRpbmcge1xuICAgICAgICAgIGhlaWdodDogOHB4O1xuICAgICAgICAgIHdpZHRoOiAyMDBweDtcbiAgICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgICAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZGRkO1xuICAgICAgICAgIHotaW5kZXg6IDk5OTtcbiAgICAgICAgICBib3JkZXI6IDFweCBzb2xpZCAjZWVlXG4gICAgICAgIH1cbiAgICAgICAgLmxvYWRpbmc6YmVmb3Jle1xuICAgICAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgICBjb250ZW50OiBcIlwiO1xuICAgICAgICAgIGxlZnQ6IC0yMDBweDtcbiAgICAgICAgICB3aWR0aDogMjBweDtcbiAgICAgICAgICBoZWlnaHQ6IDhweDtcbiAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMjk4MGI5O1xuICAgICAgICAgIGFuaW1hdGlvbjogbG9hZGluZyAycyBsaW5lYXIgaW5maW5pdGU7XG4gICAgICAgIH1cblxuICAgICAgICBAa2V5ZnJhbWVzIGxvYWRpbmcge1xuICAgICAgICAgICAgZnJvbSB7bGVmdDogLTIwcHg7IHdpZHRoOiAzMCU7fVxuICAgICAgICAgICAgNTAlIHt3aWR0aDogMzAlO31cbiAgICAgICAgICAgIDcwJSB7d2lkdGg6IDcwJTt9XG4gICAgICAgICAgICA4MCUgeyBsZWZ0OiA1MCU7fVxuICAgICAgICAgICAgOTUlIHtsZWZ0OiAxMjAlO31cbiAgICAgICAgICAgIHRvIHtsZWZ0OiAxMDAlO31cbiAgICAgICAgfVxuICAgICAgICBAa2V5ZnJhbWVzIHNwaW4ge1xuICAgICAgICAgIDAlIHtcbiAgICAgICAgICAgIHRyYW5zZm9ybTogcm90YXRlKDBkZWcpO1xuICAgICAgICAgIH1cbiAgICAgICAgICAxMDAlIHtcbiAgICAgICAgICAgIHRyYW5zZm9ybTogcm90YXRlKDM2MGRlZyk7XG4gICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICBgfTwvc3R5bGU+XG4gICAgPC9kaXY+XG4gIClcbn1cbiJdfQ== */\n/*@ sourceURL=/Users/cjgilroy/Desktop/Development/React/hockey-cards/components/App.js */"));
+  }, ".app-container.jsx-1706532751{width:100vw;height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background:lightblue;position:relative;overflow:hidden;}.buttonRow.jsx-1706532751{width:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}.loading.jsx-1706532751{height:8px;width:200px;position:relative;overflow:hidden;background-color:#ddd;z-index:999;border:1px solid #eee;}.loading.jsx-1706532751:before{display:block;position:absolute;content:\"\";left:-200px;width:20px;height:8px;background-color:#2980b9;-webkit-animation:loading-jsx-1706532751 2s linear infinite;animation:loading-jsx-1706532751 2s linear infinite;}@-webkit-keyframes loading-jsx-1706532751{from{left:-20px;width:30%;}50%{width:30%;}70%{width:70%;}80%{left:50%;}95%{left:120%;}to{left:100%;}}@keyframes loading-jsx-1706532751{from{left:-20px;width:30%;}50%{width:30%;}70%{width:70%;}80%{left:50%;}95%{left:120%;}to{left:100%;}}@-webkit-keyframes spin-jsx-1706532751{0%{-webkit-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg);}100%{-webkit-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}@keyframes spin-jsx-1706532751{0%{-webkit-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg);}100%{-webkit-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9jamdpbHJveS9EZXNrdG9wL0RldmVsb3BtZW50L1JlYWN0L2hvY2tleS1jYXJkcy9jb21wb25lbnRzL0FwcC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUErSWtCLEFBR3VCLEFBVUQsQUFNQSxBQVNHLEFBV0ksQUFDRixBQUNBLEFBQ0EsQUFDQSxBQUNELEFBSVUsQUFHRSxTQVRWLENBRkEsQUFDQSxBQUVBLEFBQ0QsQ0E5QkgsQUFNRCxBQW1CaUIsQ0FuQ2hCLEVBeUJLLE9BVVksRUFsQlosRUFoQkwsT0F5QkYsU0FSSyxFQVNKLFlBQ0QsRUFUVyxTQVVYLFdBQ2MsRUFWYixFQXlCWixJQWpDRixFQW9DRSxJQTFCSCxRQXBCc0IsR0E2QmtCLFdBVHZDLCtFQW5CeUIsc0JBNkJ6Qiw2RUE1QnVCLHFCQUNILGtCQUNGLGdCQUNsQiIsImZpbGUiOiIvVXNlcnMvY2pnaWxyb3kvRGVza3RvcC9EZXZlbG9wbWVudC9SZWFjdC9ob2NrZXktY2FyZHMvY29tcG9uZW50cy9BcHAuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgQ2FyZHNDb250YWluZXIgZnJvbSAnLi9DYXJkc0NvbnRhaW5lci5qcydcbmltcG9ydCBDbG9zZWRQYWNrIGZyb20gJy4vQ2xvc2VkUGFjay5qcydcbmltcG9ydCBfSlNYU3R5bGUgZnJvbSAnc3R5bGVkLWpzeC9zdHlsZSdcbmltcG9ydCB7dXNlU3RhdGUsdXNlRWZmZWN0fSBmcm9tICdyZWFjdCdcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gQXBwKCkge1xuICBjb25zdCBbcGFja1N0YXRlLCB1cGRhdGVQYWNrXSA9IHVzZVN0YXRlKCdjbG9zZWQnKVxuICBjb25zdCBbYnV0dG9uU3RhdGUsIHVwZGF0ZUJ1dHRvblN0YXRlXSA9IHVzZVN0YXRlKCdvcGVuJylcbiAgY29uc3QgW3Nob3dQYWNrLCB1cGRhdGVTaG93UGFja10gPSB1c2VTdGF0ZSh0cnVlKVxuICBjb25zdCBbc2hvd0NhcmRzLCB1cGRhdGVTaG93Q2FyZHNdID0gdXNlU3RhdGUoZmFsc2UpXG4gIGNvbnN0IFtpc0xvYWRpbmcsIHVwZGF0ZUlzTG9hZGluZ10gPSB1c2VTdGF0ZShmYWxzZSlcbiAgY29uc3QgW2NhcmRzQ29udGFpbmVyLCB1cGRhdGVDYXJkc0NvbnRhaW5lcl0gPSB1c2VTdGF0ZSgpXG4gIGNvbnN0IGxvYWRQYWNrID0gKCkgPT4ge1xuICAgIHVwZGF0ZUlzTG9hZGluZyh0cnVlKVxuICAgIHVwZGF0ZUJ1dHRvblN0YXRlKCcnKVxuICAgIHVwZGF0ZUNhcmRzQ29udGFpbmVyKDxDYXJkc0NvbnRhaW5lciBkb25lTG9hZD17ZG9uZUxvYWR9Lz4pXG4gIH1cblxuICBjb25zdCBkb25lTG9hZCA9ICgpID0+IHtcbiAgICB1cGRhdGVJc0xvYWRpbmcoZmFsc2UpXG4gICAgdXBkYXRlUGFjaygnb3BlbicpXG4gIH1cblxuICBjb25zdCByZXNldCA9ICgpID0+IHtcbiAgICB1cGRhdGVJc0xvYWRpbmcoZmFsc2UpXG4gICAgdXBkYXRlUGFjaygnY2xvc2VkJylcbiAgICB1cGRhdGVTaG93UGFjayh0cnVlKVxuICAgIHVwZGF0ZVNob3dDYXJkcyhmYWxzZSlcbiAgICB1cGRhdGVDYXJkc0NvbnRhaW5lcignJylcbiAgICB1cGRhdGVCdXR0b25TdGF0ZSgnb3BlbicpXG4gIH1cblxuICBjb25zdCBkb25lQW5pbWF0aW9uID0gKGUpID0+IHtcbiAgICB1cGRhdGVTaG93Q2FyZHModHJ1ZSlcbiAgICB1cGRhdGVCdXR0b25TdGF0ZSgncmVzZXQnKVxuICAgIC8vIHVwZGF0ZVNob3dQYWNrKGZhbHNlKVxuICB9XG4gIGNvbnN0IGJ1dHRvbiA9ICgpID0+IHtcblxuICAgIGxldCBidXR0b25TdHlsZSA9IChcbiAgICAgIDxzdHlsZSBqc3g+e2BcbiAgICAgIC5idG4ge1xuICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgIG1pbi13aWR0aDogODBweDtcbiAgICAgICAgYm9yZGVyLXdpZHRoOiAwO1xuICAgICAgICBvdXRsaW5lOiBub25lO1xuICAgICAgICBib3JkZXItcmFkaXVzOiAycHg7XG4gICAgICAgIGJveC1zaGFkb3c6IDAgMXB4IDRweCByZ2JhKDAsIDAsIDAsIC42KTtcbiAgICAgICAgei1pbmRleDogOTk5OTk7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICMyZWNjNzE7XG4gICAgICAgIGNvbG9yOiAjZWNmMGYxO1xuICAgICAgICBhbmltYXRpb246IHB1bHNlIDFzIGluZmluaXRlO1xuICAgICAgICB0cmFuc2l0aW9uOiBiYWNrZ3JvdW5kLWNvbG9yIC4zcztcbiAgICAgIH1cbiAgICAgIEBrZXlmcmFtZXMgcHVsc2VcbiAgICAgIHtcbiAgICAgICAgICAgMCUge1xuICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogc2NhbGUoMSlcbiAgICAgICAgICAgfVxuICAgICAgICAgICA1MCUge1xuICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogc2NhbGUoMS4xKVxuICAgICAgICAgICB9XG4gICAgICAgICAgIDEwMCUge1xuICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogc2NhbGUoMSlcbiAgICAgICAgICAgfVxuICAgICAgfVxuXG4gICAgICAuYnRuOmhvdmVyLCAuYnRuOmZvY3VzIHtcbiAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzI3YWU2MDtcbiAgICAgIH1cblxuICAgICAgLmJ0biA+ICoge1xuICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB9XG5cbiAgICAgIC5idG4gc3BhbiB7XG4gICAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgICBwYWRkaW5nOiAxMnB4IDI0cHg7XG4gICAgICB9XG5cbiAgICAgIC5idG46YmVmb3JlIHtcbiAgICAgICAgY29udGVudDogXCJcIjtcblxuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHRvcDogNTAlO1xuICAgICAgICBsZWZ0OiA1MCU7XG5cbiAgICAgICAgZGlzcGxheTogYmxvY2s7XG4gICAgICAgIHdpZHRoOiAwO1xuICAgICAgICBwYWRkaW5nLXRvcDogMDtcblxuICAgICAgICBib3JkZXItcmFkaXVzOiAxMDAlO1xuXG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjM2LCAyNDAsIDI0MSwgLjMpO1xuXG4gICAgICAgIC13ZWJraXQtdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgICAgIC1tb3otdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgICAgIC1tcy10cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICAgICAgLW8tdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgICAgfVxuXG4gICAgICAuYnRuOmFjdGl2ZTpiZWZvcmUge1xuICAgICAgICB3aWR0aDogMTIwJTtcbiAgICAgICAgcGFkZGluZy10b3A6IDEyMCU7XG5cbiAgICAgICAgdHJhbnNpdGlvbjogd2lkdGggLjJzIGVhc2Utb3V0LCBwYWRkaW5nLXRvcCAuMnMgZWFzZS1vdXQ7XG4gICAgICB9XG4gICAgICBgfTwvc3R5bGU+XG4gICAgKVxuICAgIGxldCByZXNldFN0eWxlID0gKFxuICAgICAgPHN0eWxlIGpzeD57YFxuICAgICAgICAuYnRuIHtcbiAgICAgICAgICB0b3A6IDA7XG4gICAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgICAgbWFyZ2luLXRvcDogMTBweDtcbiAgICAgICAgICBhbmltYXRpb246IG5vbmU7XG4gICAgICAgIH1cbiAgICAgICAgYH1cbiAgICAgIDwvc3R5bGU+XG4gICAgKVxuICAgIGlmIChidXR0b25TdGF0ZSA9PT0gJ29wZW4nKSB7XG4gICAgICByZXR1cm4gPGRpdiBjbGFzc05hbWU9XCJidXR0b25Sb3dfX2J1dHRvbiBidG5cIiBvbkNsaWNrPXtsb2FkUGFja30gPntidXR0b25TdHlsZX08c3Bhbj5PUEVOPC9zcGFuPjwvZGl2PlxuICAgIH0gZWxzZSBpZiAoYnV0dG9uU3RhdGUgPT09ICdyZXNldCcpIHtcbiAgICAgIHJldHVybiA8ZGl2IGNsYXNzTmFtZT1cImJ1dHRvblJvd19fYnV0dG9uIGJ0blwiIG9uQ2xpY2s9e3Jlc2V0fSA+e2J1dHRvblN0eWxlfXtyZXNldFN0eWxlfTxzcGFuPlJFU0VUPC9zcGFuPjwvZGl2PlxuICAgIH0gZWxzZSB7XG4gICAgICByZXR1cm4gJydcbiAgICB9XG4gIH1cbiAgbGV0IGRpc3BsYXlDYXJkcyA9IHNob3dDYXJkcyA/IHtoZWlnaHQ6JzEwMCUnLHdpZHRoOicxMDAlJ30gOiB7ZGlzcGxheTonbm9uZSd9XG5cbiAgcmV0dXJuIChcbiAgICA8ZGl2IGNsYXNzTmFtZT1cImFwcC1jb250YWluZXJcIj5cbiAgICAgIHtidXR0b24oKX1cbiAgICAgIHtpc0xvYWRpbmcgJiYgPGRpdiBjbGFzc05hbWU9XCJsb2FkaW5nXCI+PC9kaXY+fVxuICAgICAgPGRpdiBzdHlsZT17ZGlzcGxheUNhcmRzfT57Y2FyZHNDb250YWluZXJ9PC9kaXY+XG4gICAgICB7c2hvd1BhY2sgJiYgPENsb3NlZFBhY2sgcGFja1N0YXRlPXtwYWNrU3RhdGV9IGRvbmVBbmltYXRpb249e2RvbmVBbmltYXRpb259Lz59XG4gICAgICA8c3R5bGUganN4PntgXG4gICAgICAgIC5hcHAtY29udGFpbmVyIHtcbiAgICAgICAgICB3aWR0aDogMTAwdnc7XG4gICAgICAgICAgaGVpZ2h0OiAxMDB2aDtcbiAgICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgICAgYmFja2dyb3VuZDogbGlnaHRibHVlO1xuICAgICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgICAgICBvdmVyZmxvdzogaGlkZGVuO1xuICAgICAgICB9XG4gICAgICAgIC5idXR0b25Sb3cge1xuICAgICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICAgIGRpc3BsYXk6IGZsZXg7XG5cbiAgICAgICAgfVxuXG4gICAgICAgIC5sb2FkaW5nIHtcbiAgICAgICAgICBoZWlnaHQ6IDhweDtcbiAgICAgICAgICB3aWR0aDogMjAwcHg7XG4gICAgICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogI2RkZDtcbiAgICAgICAgICB6LWluZGV4OiA5OTk7XG4gICAgICAgICAgYm9yZGVyOiAxcHggc29saWQgI2VlZVxuICAgICAgICB9XG4gICAgICAgIC5sb2FkaW5nOmJlZm9yZXtcbiAgICAgICAgICBkaXNwbGF5OiBibG9jaztcbiAgICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgICAgY29udGVudDogXCJcIjtcbiAgICAgICAgICBsZWZ0OiAtMjAwcHg7XG4gICAgICAgICAgd2lkdGg6IDIwcHg7XG4gICAgICAgICAgaGVpZ2h0OiA4cHg7XG4gICAgICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzI5ODBiOTtcbiAgICAgICAgICBhbmltYXRpb246IGxvYWRpbmcgMnMgbGluZWFyIGluZmluaXRlO1xuICAgICAgICB9XG5cbiAgICAgICAgQGtleWZyYW1lcyBsb2FkaW5nIHtcbiAgICAgICAgICAgIGZyb20ge2xlZnQ6IC0yMHB4OyB3aWR0aDogMzAlO31cbiAgICAgICAgICAgIDUwJSB7d2lkdGg6IDMwJTt9XG4gICAgICAgICAgICA3MCUge3dpZHRoOiA3MCU7fVxuICAgICAgICAgICAgODAlIHsgbGVmdDogNTAlO31cbiAgICAgICAgICAgIDk1JSB7bGVmdDogMTIwJTt9XG4gICAgICAgICAgICB0byB7bGVmdDogMTAwJTt9XG4gICAgICAgIH1cbiAgICAgICAgQGtleWZyYW1lcyBzcGluIHtcbiAgICAgICAgICAwJSB7XG4gICAgICAgICAgICB0cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTtcbiAgICAgICAgICB9XG4gICAgICAgICAgMTAwJSB7XG4gICAgICAgICAgICB0cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpO1xuICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgYH08L3N0eWxlPlxuICAgIDwvZGl2PlxuICApXG59XG4iXX0= */\n/*@ sourceURL=/Users/cjgilroy/Desktop/Development/React/hockey-cards/components/App.js */"));
 }
 
 /***/ }),
@@ -315,6 +307,7 @@ var _jsxFileName = "/Users/cjgilroy/Desktop/Development/React/hockey-cards/compo
 var outputCard = function outputCard(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
+    filter: "url(#filter)",
     viewBox: "0 0 250 350",
     __source: {
       fileName: _jsxFileName,
@@ -337,32 +330,62 @@ var outputCard = function outputCard(props) {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("feTurbulence", {
     type: "fractalNoise",
-    baseFrequency: "0.1 0.1",
-    numOctaves: "10",
-    seed: "4",
-    stitchTiles: "stitch",
+    baseFrequency: "0.5 0.5",
+    numOctaves: "1",
+    seed: "1",
+    stitchTiles: "noStitch",
     x: "0%",
     y: "0%",
-    width: "100%",
+    width: "200%",
     height: "100%",
-    result: "turbulence2",
+    result: "turbulence",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("feColorMatrix", {
-    type: "matrix",
-    values: "0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0.6",
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("feTurbulence", {
+    type: "turbulence",
+    baseFrequency: "0.01 0.01",
+    numOctaves: "6",
+    seed: "1",
+    stitchTiles: "stitch",
     x: "0%",
     y: "0%",
     width: "100%",
     height: "100%",
-    in: "turbulence2",
-    result: "colormatrix",
+    result: "turbulence1",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("feComposite", {
+    in: "turbulence",
+    in2: "turbulence1",
+    operator: "over",
+    x: "0%",
+    y: "0%",
+    width: "100%",
+    height: "100%",
+    result: "composite2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("feColorMatrix", {
+    type: "matrix",
+    values: "1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 1 0",
+    x: "0%",
+    y: "0%",
+    width: "100%",
+    height: "100%",
+    in: "composite2",
+    result: "colormatrix",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("feComposite", {
@@ -376,20 +399,20 @@ var outputCard = function outputCard(props) {
     result: "composite1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 16
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("defs", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 18
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("clipPath", {
     id: "clip-path",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 19
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
@@ -402,30 +425,23 @@ var outputCard = function outputCard(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 19
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, "card-template"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("rect", {
-    filter: "url(#filter)",
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("rect", {
     height: "350",
     width: "250",
     fill: _TeamResources_js__WEBPACK_IMPORTED_MODULE_1__["default"][props.playerData.teamID].primaryColor,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 21
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     id: "playerInfo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 22
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
@@ -434,7 +450,7 @@ var outputCard = function outputCard(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 23
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("image", {
@@ -446,13 +462,13 @@ var outputCard = function outputCard(props) {
     xlinkHref: props.picUrl,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 24
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 28
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("rect", {
@@ -464,7 +480,7 @@ var outputCard = function outputCard(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 29
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
@@ -472,17 +488,18 @@ var outputCard = function outputCard(props) {
     style: {
       fontSize: '13px',
       fontFamily: 'Arial-BoldMT, Arial',
-      fontWeight: '700'
+      fontWeight: '700',
+      pointerEvents: 'none'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 31
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 32
     },
     __self: this
   }, props.moreData[0].firstName.toUpperCase())), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
@@ -491,17 +508,18 @@ var outputCard = function outputCard(props) {
     style: {
       fontSize: '18px',
       fontFamily: 'Arial-BoldMT, Arial',
-      fontWeight: '700'
+      fontWeight: '700',
+      pointerEvents: 'none'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 34
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 35
     },
     __self: this
   }, props.moreData[0].lastName.toUpperCase())))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
@@ -515,7 +533,7 @@ var outputCard = function outputCard(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 40
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
@@ -528,14 +546,14 @@ var outputCard = function outputCard(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 41
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
     id: "data",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 46
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
@@ -544,11 +562,12 @@ var outputCard = function outputCard(props) {
       fontSize: '15px',
       fontFamily: 'Arial-BoldItalicMT, Arial',
       fontWeight: '700',
-      fontStyle: 'italic'
+      fontStyle: 'italic',
+      pointerEvents: 'none'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 47
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
@@ -558,7 +577,7 @@ var outputCard = function outputCard(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 48
     },
     __self: this
   }, _TeamResources_js__WEBPACK_IMPORTED_MODULE_1__["default"][props.playerData.teamID].teamName.toUpperCase())), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("g", {
@@ -566,45 +585,46 @@ var outputCard = function outputCard(props) {
     transform: "translate(88 286)",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 50
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
     height: "47px",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 50
     },
     __self: this
   }, _TeamResources_js__WEBPACK_IMPORTED_MODULE_1__["default"][props.playerData.teamID].logo)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("text", {
     transform: "translate(20 15)",
     style: {
-      fontSize: '13px',
+      fontSize: '15px',
       fontFamily: 'Arial-BoldMT, Arial',
-      fontWeight: '700'
+      fontWeight: '700',
+      pointerEvents: 'none'
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 51
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
     fill: "#fff",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 52
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 53
     },
     __self: this
   }, "#", props.playerData.number), "\xB7", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tspan", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 55
     },
     __self: this
   }, props.playerData.position))))));
@@ -705,7 +725,6 @@ var CardsContainer = function CardsContainer(props) {
     updatePackOpen(true);
   };
 
-  console.log('cardsCont');
   return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     style: {
       width: '100%',
@@ -717,7 +736,7 @@ var CardsContainer = function CardsContainer(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 38
     },
     __self: this
   }, cards);
@@ -752,7 +771,7 @@ function ClosedPack(props) {
       lineNumber: 4
     },
     __self: this
-  }, "\n      .animation {\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        position: absolute;\n        height: 478px;\n        width: 550px;\n        animation: zoom 0.5s linear forwards, spin 0.4s ease-in forwards;\n        animation-delay: 0.9s, 1.4s;\n      }\n      @keyframes zoom {\n        100% {\n          box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);\n          transform: scale(1.2)\n        }\n      }\n      @keyframes spin {\n        0% {\n          transform: scale(1.2)\n        }\n        100% {\n          transform: scale(1.2) rotate(50deg) translateX(1000px);\n        }\n      }\n      .paper-wrapper {\n        height: 350px;\n        width: 250px;\n        background-image: url('static/wrapper-center.png')\n      }\n      .paper {\n        height: 100%;\n        width: 100%;\n        position: relative;\n      }\n      .corner__blockout {\n        height: 64px;\n        width: 64px;\n        z-index: 3;\n        position: absolute;\n      }\n\n      .corner__blockout-topleft {\n        background-image: -webkit-linear-gradient(\n          45deg,\n          #ccc 0%,\n          #ccc 50%,\n          rgba(0, 0, 0, 0) 50%,\n          rgba(0, 0, 0, 0) 100%\n        );\n      }\n      .corner__blockout-topright {\n        background-image: -webkit-linear-gradient(\n          135deg,\n          #ccc 0%,\n          #ccc 50%,\n          rgba(0, 0, 0, 0) 50%,\n          rgba(0, 0, 0, 0) 100%\n        );\n        right: 0;\n      }\n      .corner__blockout-bottomleft {\n        background-image: -webkit-linear-gradient(\n          -45deg,\n          #ccc 0%,\n          #ccc 50%,\n          rgba(0, 0, 0, 0) 50%,\n          rgba(0, 0, 0, 0) 100%\n        );\n        bottom: 0;\n      }\n      .corner__blockout-bottomright {\n        background-image: -webkit-linear-gradient(\n          225deg,\n          #ccc 0%,\n          #ccc 50%,\n          rgba(0, 0, 0, 0) 50%,\n          rgba(0, 0, 0, 0) 100%\n        );\n        right: 0;\n        bottom: 0;\n      }\n      .corner {\n        height: 64px;\n        width: 64px;\n        position: absolute;\n        z-index: 4;\n      }\n\n      .corner-topleft {\n        left: 0;\n        top: 0;\n        transform: rotate3d(1, 1, 0, 90deg);\n        animation: unfold-corner-topleft 0.3s linear forwards;\n        animation-delay: 0.3s;\n        background-image: url('static/corner-topleft.png')\n      }\n      .corner-topright {\n        right: 0;\n        top: 0;\n        transform: rotate3d(-1, 1, 0, 90deg);\n        animation: unfold-corner-topright 0.3s linear forwards;\n        animation-delay: 0.3s;\n        background-image: url('static/corner-topright.png')\n      }\n      .corner-bottomleft {\n        left: 0;\n        bottom: 0;\n        transform: rotate3d(-1, 1, 0, 90deg);\n        animation: unfold-corner-bottomleft 0.3s linear forwards;\n        animation-delay: 0.3s;\n        background-image: url('static/corner-bottomleft.png');\n      }\n      .corner-bottomright {\n        right: 0;\n        bottom: 0;\n        transform: rotate3d(1, 1, 0, 90deg);\n        animation: unfold-corner-bottomright 0.3s linear forwards;\n        animation-delay: 0.3s;\n        background-image: url('static/corner-bottomright.png');\n      }\n      .corner::before {\n        content: \"\";\n        position: absolute;\n        width: 100%;\n        height: 100%;\n        z-index: 5;\n      }\n\n      .corner-topleft::before {\n\n      }\n\n      .corner-topright::before {\n\n      }\n      .corner-bottomleft::before {\n\n      }\n\n      .corner-bottomright::before {\n\n      }\n\n      @keyframes unfold-corner-topleft {\n        100% {\n          transform: rotate3d(1, 1, 0, 180deg);\n        }\n      }\n      @keyframes unfold-corner-topright {\n        100% {\n          transform: rotate3d(-1, 1, 0, 180deg);\n        }\n      }\n      @keyframes unfold-corner-bottomleft {\n        100% {\n          transform: rotate3d(-1, 1, 0, 180deg);\n        }\n      }\n      @keyframes unfold-corner-bottomright {\n        100% {\n          transform: rotate3d(1, 1, 0, 180deg);\n        }\n      }\n\n\n      /* top css */\n      .foldup {\n        height: 64px;\n        width: 250px;\n        position: absolute;\n        left: 0;\n        opacity: 1;\n        transform: rotate3d(1, 0, 0, 90deg);\n        z-index: 3;\n      }\n      .top-foldup {\n        top: 0;\n        transform-origin: top;\n        animation: unfold-top 0.3s linear forwards;\n        background: url('static/foldup.png')\n      }\n      .bottom-foldup {\n        bottom: 0;\n        transform-origin: bottom;\n        animation: unfold-bottom 0.3s linear forwards;\n        background: url('static/folddown.png');\n      }\n      .foldup::before {\n        content: \"\";\n        position: absolute;\n        width: 100%;\n        height: 100%;\n      }\n      .top-foldup::before {\n        background: -webkit-linear-gradient(\n          90deg,\n          hsla(0, 0%, 0%, 0.05) 0%,\n          hsla(0, 0%, 0%, 0) 100%\n        );\n      }\n      .bottom-foldup::before {\n        bottom: 0;\n        background: -webkit-linear-gradient(\n          90deg,\n          hsla(0, 0%, 0%, 0.05) 0%,\n          hsla(0, 0%, 0%, 0) 100%\n        );\n      }\n      @keyframes unfold-top {\n        100% {\n          transform: rotate3d(1, 0, 0, 180deg);\n        }\n      }\n      @keyframes unfold-bottom {\n        100% {\n          transform: rotate3d(1, 0, 0, 180deg);\n        }\n      }\n      .foldout {\n        height: 478px;\n        position: absolute;\n        top: -64px;\n      }\n\n      .foldout-left {\n        width: 154px;\n        left: 0;\n        animation: unfold-left 0.3s linear forwards;\n        animation-delay: 0.6s;\n        transform-origin: left;\n        transform: rotate3d(0, 1, 0, 90deg);\n        background-image: url('static/foldout-left.png')\n      }\n      .foldout-right {\n        width: 150px;\n        right: 0;\n        background: white;\n        animation: unfold-right 0.3s linear forwards;\n        animation-delay: 0.6s;\n        transform-origin: right;\n        transform: rotate3d(0, -1, 0, 90deg);\n        background-image: url('static/foldout-right.png')\n      }\n\n      .foldout::before {\n        content: \"\";\n        position: absolute;\n        width: 100%;\n        height: 100%;\n        z-index: -1;\n      }\n      .foldout-left::before {\n        background: -webkit-linear-gradient(\n          0deg,\n          hsla(0, 0%, 0%, 0.05) 0%,\n          hsla(0, 0%, 0%, 0) 100%\n        );\n      }\n      .foldout-right::before {\n        background: -webkit-linear-gradient(\n          180deg,\n          hsla(0, 0%, 0%, 0.05) 0%,\n          hsla(0, 0%, 0%, 0) 100%\n        );\n      }\n      @keyframes unfold-left {\n        100% {\n          transform: rotate3d(0, 1, 0, 180deg);\n        }\n      }\n      @keyframes unfold-right {\n        0% {\n          transform: rotate3d(0, -1, 0, 90deg);\n        }\n        100% {\n          transform: rotate3d(0, -1, 0, 180deg);\n        }\n      }\n    ");
+  }, "\n      .animation {\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        position: absolute;\n        height: 478px;\n        width: 550px;\n        animation: zoom 0.5s linear forwards, spin 0.4s ease-in forwards;\n        animation-delay: 0.9s, 1.4s;\n      }\n      @keyframes zoom {\n        100% {\n          box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);\n          transform: scale(1.2)\n        }\n      }\n      @keyframes spin {\n        0% {\n          transform: scale(1.2)\n        }\n        100% {\n          transform: scale(1.2) rotate(50deg) translateX(1000px);\n        }\n      }\n      .paper-wrapper {\n        height: 350px;\n        width: 250px;\n        background-image: url('static/wrapper-center.png')\n      }\n      .paper {\n        height: 100%;\n        width: 100%;\n        position: relative;\n      }\n      .corner__blockout {\n        height: 64px;\n        width: 64px;\n        z-index: 3;\n        position: absolute;\n      }\n\n      .corner__blockout-topleft {\n        background-image: -webkit-linear-gradient(\n          45deg,\n          lightblue 0%,\n          lightblue 50%,\n          rgba(0, 0, 0, 0) 50%,\n          rgba(0, 0, 0, 0) 100%\n        );\n      }\n      .corner__blockout-topright {\n        background-image: -webkit-linear-gradient(\n          135deg,\n          lightblue 0%,\n          lightblue 50%,\n          rgba(0, 0, 0, 0) 50%,\n          rgba(0, 0, 0, 0) 100%\n        );\n        right: 0;\n      }\n      .corner__blockout-bottomleft {\n        background-image: -webkit-linear-gradient(\n          -45deg,\n          lightblue 0%,\n          lightblue 50%,\n          rgba(0, 0, 0, 0) 50%,\n          rgba(0, 0, 0, 0) 100%\n        );\n        bottom: 0;\n      }\n      .corner__blockout-bottomright {\n        background-image: -webkit-linear-gradient(\n          225deg,\n          lightblue 0%,\n          lightblue 50%,\n          rgba(0, 0, 0, 0) 50%,\n          rgba(0, 0, 0, 0) 100%\n        );\n        right: 0;\n        bottom: 0;\n      }\n      .corner {\n        height: 64px;\n        width: 64px;\n        position: absolute;\n        z-index: 4;\n      }\n\n      .corner-topleft {\n        left: 0;\n        top: 0;\n        transform: rotate3d(1, 1, 0, 90deg);\n        animation: unfold-corner-topleft 0.3s linear forwards;\n        animation-delay: 0.3s;\n        background-image: url('static/corner-topleft.png')\n      }\n      .corner-topright {\n        right: 0;\n        top: 0;\n        transform: rotate3d(-1, 1, 0, 90deg);\n        animation: unfold-corner-topright 0.3s linear forwards;\n        animation-delay: 0.3s;\n        background-image: url('static/corner-topright.png')\n      }\n      .corner-bottomleft {\n        left: 0;\n        bottom: 0;\n        transform: rotate3d(-1, 1, 0, 90deg);\n        animation: unfold-corner-bottomleft 0.3s linear forwards;\n        animation-delay: 0.3s;\n        background-image: url('static/corner-bottomleft.png');\n      }\n      .corner-bottomright {\n        right: 0;\n        bottom: 0;\n        transform: rotate3d(1, 1, 0, 90deg);\n        animation: unfold-corner-bottomright 0.3s linear forwards;\n        animation-delay: 0.3s;\n        background-image: url('static/corner-bottomright.png');\n      }\n      .corner::before {\n        content: \"\";\n        position: absolute;\n        width: 100%;\n        height: 100%;\n        z-index: 5;\n      }\n\n      .corner-topleft::before {\n\n      }\n\n      .corner-topright::before {\n\n      }\n      .corner-bottomleft::before {\n\n      }\n\n      .corner-bottomright::before {\n\n      }\n\n      @keyframes unfold-corner-topleft {\n        100% {\n          transform: rotate3d(1, 1, 0, 180deg);\n        }\n      }\n      @keyframes unfold-corner-topright {\n        100% {\n          transform: rotate3d(-1, 1, 0, 180deg);\n        }\n      }\n      @keyframes unfold-corner-bottomleft {\n        100% {\n          transform: rotate3d(-1, 1, 0, 180deg);\n        }\n      }\n      @keyframes unfold-corner-bottomright {\n        100% {\n          transform: rotate3d(1, 1, 0, 180deg);\n        }\n      }\n\n\n      /* top css */\n      .foldup {\n        height: 64px;\n        width: 250px;\n        position: absolute;\n        left: 0;\n        opacity: 1;\n        transform: rotate3d(1, 0, 0, 90deg);\n        z-index: 3;\n      }\n      .top-foldup {\n        top: 0;\n        transform-origin: top;\n        animation: unfold-top 0.3s linear forwards;\n        background: url('static/foldup.png')\n      }\n      .bottom-foldup {\n        bottom: 0;\n        transform-origin: bottom;\n        animation: unfold-bottom 0.3s linear forwards;\n        background: url('static/folddown.png');\n      }\n      .foldup::before {\n        content: \"\";\n        position: absolute;\n        width: 100%;\n        height: 100%;\n      }\n      .top-foldup::before {\n        background: -webkit-linear-gradient(\n          90deg,\n          hsla(0, 0%, 0%, 0.05) 0%,\n          hsla(0, 0%, 0%, 0) 100%\n        );\n      }\n      .bottom-foldup::before {\n        bottom: 0;\n        background: -webkit-linear-gradient(\n          90deg,\n          hsla(0, 0%, 0%, 0.05) 0%,\n          hsla(0, 0%, 0%, 0) 100%\n        );\n      }\n      @keyframes unfold-top {\n        100% {\n          transform: rotate3d(1, 0, 0, 180deg);\n        }\n      }\n      @keyframes unfold-bottom {\n        100% {\n          transform: rotate3d(1, 0, 0, 180deg);\n        }\n      }\n      .foldout {\n        height: 478px;\n        position: absolute;\n        top: -64px;\n      }\n\n      .foldout-left {\n        width: 154px;\n        left: 0;\n        animation: unfold-left 0.3s linear forwards;\n        animation-delay: 0.6s;\n        transform-origin: left;\n        transform: rotate3d(0, 1, 0, 90deg);\n        background-image: url('static/foldout-left.png')\n      }\n      .foldout-right {\n        width: 150px;\n        right: 0;\n        background: white;\n        animation: unfold-right 0.3s linear forwards;\n        animation-delay: 0.6s;\n        transform-origin: right;\n        transform: rotate3d(0, -1, 0, 90deg);\n        background-image: url('static/foldout-right.png')\n      }\n\n      .foldout::before {\n        content: \"\";\n        position: absolute;\n        width: 100%;\n        height: 100%;\n        z-index: -1;\n      }\n      .foldout-left::before {\n        background: -webkit-linear-gradient(\n          0deg,\n          hsla(0, 0%, 0%, 0.05) 0%,\n          hsla(0, 0%, 0%, 0) 100%\n        );\n      }\n      .foldout-right::before {\n        background: -webkit-linear-gradient(\n          180deg,\n          hsla(0, 0%, 0%, 0.05) 0%,\n          hsla(0, 0%, 0%, 0) 100%\n        );\n      }\n      @keyframes unfold-left {\n        100% {\n          transform: rotate3d(0, 1, 0, 180deg);\n        }\n      }\n      @keyframes unfold-right {\n        0% {\n          transform: rotate3d(0, -1, 0, 90deg);\n        }\n        100% {\n          transform: rotate3d(0, -1, 0, 180deg);\n        }\n      }\n    ");
   var staticStyle = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("style", {
     jsx: true,
     __source: {
@@ -1103,6 +1122,10 @@ var PlayerPicker = function PlayerPicker(props) {
       cards = _useState2[0],
       setCards = _useState2[1];
 
+  var defaultImg = function defaultImg(image) {
+    image.src = 'static/skater.jpg';
+  };
+
   Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(function () {
     var picPromises = [];
     var playerData = [];
@@ -1128,7 +1151,7 @@ var PlayerPicker = function PlayerPicker(props) {
         };
 
         img.onerror = function () {
-          return resolve(img);
+          return defaultImg(img);
         };
 
         img.src = "https://nhl.bamcontent.com/images/actionshots/" + props.playerList[index].person.id + ".jpg";
@@ -1148,7 +1171,7 @@ var PlayerPicker = function PlayerPicker(props) {
           moreData: json,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 39
+            lineNumber: 42
           },
           __self: this
         }));
@@ -11172,13 +11195,20 @@ var _jsxFileName = "/Users/cjgilroy/Desktop/Development/React/hockey-cards/pages
       lineNumber: 6
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
+    className: "jsx-1028220061",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, "Hockey Cards"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
     name: "viewport",
     content: "width=device-width, initial-scale=1",
     className: "jsx-1028220061",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 8
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
@@ -11186,16 +11216,16 @@ var _jsxFileName = "/Users/cjgilroy/Desktop/Development/React/hockey-cards/pages
     className: "jsx-1028220061",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 9
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_3___default.a, {
     id: "1028220061",
     __self: this
-  }, "body{margin:0;font-family:sans-serif;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9jamdpbHJveS9EZXNrdG9wL0RldmVsb3BtZW50L1JlYWN0L2hvY2tleS1jYXJkcy9wYWdlcy9pbmRleC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFTbUIsQUFHYyxTQUNjLHVCQUN6QiIsImZpbGUiOiIvVXNlcnMvY2pnaWxyb3kvRGVza3RvcC9EZXZlbG9wbWVudC9SZWFjdC9ob2NrZXktY2FyZHMvcGFnZXMvaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgQXBwIGZyb20gJy4uL2NvbXBvbmVudHMvQXBwLmpzJ1xuaW1wb3J0IEhlYWQgZnJvbSAnbmV4dC9oZWFkJ1xuaW1wb3J0IF9KU1hTdHlsZSBmcm9tICdzdHlsZWQtanN4L3N0eWxlJ1xuZXhwb3J0IGRlZmF1bHQgKCkgPT4gKFxuICA8ZGl2PlxuICA8SGVhZD5cbiAgPG1ldGEgbmFtZT1cInZpZXdwb3J0XCIgY29udGVudD1cIndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xXCIgLz5cbiAgPG1ldGEgY2hhclNldD1cInV0Zi04XCIgLz5cbjwvSGVhZD5cbjxzdHlsZSBqc3ggZ2xvYmFsPntgXG4gIGJvZHkge1xuICAgIG1hcmdpbjogMDtcbiAgICBmb250LWZhbWlseTogc2Fucy1zZXJpZjtcbiAgfVxuYH08L3N0eWxlPlxuICA8QXBwIC8+XG4gIDwvZGl2PlxuKVxuIl19 */\n/*@ sourceURL=/Users/cjgilroy/Desktop/Development/React/hockey-cards/pages/index.js */"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_App_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, "body{margin:0;font-family:sans-serif;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9jamdpbHJveS9EZXNrdG9wL0RldmVsb3BtZW50L1JlYWN0L2hvY2tleS1jYXJkcy9wYWdlcy9pbmRleC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFVbUIsQUFHYyxTQUNjLHVCQUN6QiIsImZpbGUiOiIvVXNlcnMvY2pnaWxyb3kvRGVza3RvcC9EZXZlbG9wbWVudC9SZWFjdC9ob2NrZXktY2FyZHMvcGFnZXMvaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgQXBwIGZyb20gJy4uL2NvbXBvbmVudHMvQXBwLmpzJ1xuaW1wb3J0IEhlYWQgZnJvbSAnbmV4dC9oZWFkJ1xuaW1wb3J0IF9KU1hTdHlsZSBmcm9tICdzdHlsZWQtanN4L3N0eWxlJ1xuZXhwb3J0IGRlZmF1bHQgKCkgPT4gKFxuICA8ZGl2PlxuICA8SGVhZD5cbiAgPHRpdGxlPkhvY2tleSBDYXJkczwvdGl0bGU+XG4gIDxtZXRhIG5hbWU9XCJ2aWV3cG9ydFwiIGNvbnRlbnQ9XCJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MVwiIC8+XG4gIDxtZXRhIGNoYXJTZXQ9XCJ1dGYtOFwiIC8+XG48L0hlYWQ+XG48c3R5bGUganN4IGdsb2JhbD57YFxuICBib2R5IHtcbiAgICBtYXJnaW46IDA7XG4gICAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XG4gIH1cbmB9PC9zdHlsZT5cbiAgPEFwcCAvPlxuICA8L2Rpdj5cbilcbiJdfQ== */\n/*@ sourceURL=/Users/cjgilroy/Desktop/Development/React/hockey-cards/pages/index.js */"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_App_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 17
     },
     __self: this
   }));
