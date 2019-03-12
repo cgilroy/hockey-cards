@@ -60,8 +60,20 @@ export default function App() {
         z-index: 99999;
         background-color: #2ecc71;
         color: #ecf0f1;
-
+        animation: pulse 1s infinite;
         transition: background-color .3s;
+      }
+      @keyframes pulse
+      {
+           0% {
+                transform: scale(1)
+           }
+           50% {
+                transform: scale(1.1)
+           }
+           100% {
+                transform: scale(1)
+           }
       }
 
       .btn:hover, .btn:focus {
@@ -115,6 +127,7 @@ export default function App() {
           justify-content: center;
           align-items: center;
           margin-top: 10px;
+          animation: none;
         }
         `}
       </style>
@@ -142,7 +155,7 @@ export default function App() {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: #ccc;
+          background: lightblue;
           position: relative;
           overflow: hidden;
         }

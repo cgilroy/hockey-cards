@@ -48,7 +48,7 @@ const outputCard = (props) => {
             <tspan textLength="195" style={{fill:'#e54f4a'}}>{resources[props.playerData.teamID].teamName.toUpperCase()}</tspan>
           </text>
           <g id="logo" transform="translate(88 286)"><svg height="47px">{resources[props.playerData.teamID].logo}</svg></g>
-          <text transform="translate(20 15)" style={{fontSize:'13px',fontFamily:'Arial-BoldMT, Arial',fontWeight:'700',pointerEvents:'none'}}>
+          <text transform="translate(20 15)" style={{fontSize:'15px',fontFamily:'Arial-BoldMT, Arial',fontWeight:'700',pointerEvents:'none'}}>
             <tspan fill="#fff">
               <tspan>#{props.playerData.number}</tspan>
               &#183;

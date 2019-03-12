@@ -46,8 +46,8 @@ export default function ClosedPack(props) {
       .corner__blockout-topleft {
         background-image: -webkit-linear-gradient(
           45deg,
-          #ccc 0%,
-          #ccc 50%,
+          lightblue 0%,
+          lightblue 50%,
           rgba(0, 0, 0, 0) 50%,
           rgba(0, 0, 0, 0) 100%
         );
@@ -55,8 +55,8 @@ export default function ClosedPack(props) {
       .corner__blockout-topright {
         background-image: -webkit-linear-gradient(
           135deg,
-          #ccc 0%,
-          #ccc 50%,
+          lightblue 0%,
+          lightblue 50%,
           rgba(0, 0, 0, 0) 50%,
           rgba(0, 0, 0, 0) 100%
         );
@@ -65,8 +65,8 @@ export default function ClosedPack(props) {
       .corner__blockout-bottomleft {
         background-image: -webkit-linear-gradient(
           -45deg,
-          #ccc 0%,
-          #ccc 50%,
+          lightblue 0%,
+          lightblue 50%,
           rgba(0, 0, 0, 0) 50%,
           rgba(0, 0, 0, 0) 100%
         );
@@ -75,8 +75,8 @@ export default function ClosedPack(props) {
       .corner__blockout-bottomright {
         background-image: -webkit-linear-gradient(
           225deg,
-          #ccc 0%,
-          #ccc 50%,
+          lightblue 0%,
+          lightblue 50%,
           rgba(0, 0, 0, 0) 50%,
           rgba(0, 0, 0, 0) 100%
         );

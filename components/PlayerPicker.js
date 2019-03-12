@@ -8,6 +8,9 @@ const PlayerPicker = (props) => {
   }
 
   const [cards,setCards] = useState('')
+  const defaultImg = (image) => {
+    image.src = 'static/skater.jpg'
+  }
 
   useEffect(
     () => {
@@ -26,7 +29,7 @@ const PlayerPicker = (props) => {
           new Promise((resolve, reject) => {
             let img = new Image()
             img.onload = () => resolve(img)
-            img.onerror = () => resolve(img)
+            img.onerror = () => defaultImg(img)
             img.src = "https://nhl.bamcontent.com/images/actionshots/" + props.playerList[index].person.id + ".jpg"
           })
         )
