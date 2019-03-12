@@ -11,15 +11,12 @@ export default function App() {
   const [isLoading, updateIsLoading] = useState(false)
   const [cardsContainer, updateCardsContainer] = useState()
   const loadPack = () => {
-    console.log('loadPack')
     updateIsLoading(true)
     updateButtonState('')
     updateCardsContainer(<CardsContainer doneLoad={doneLoad}/>)
-    console.log('immediatecardcont',cardsContainer)
   }
 
   const doneLoad = () => {
-    console.log('doneLoad')
     updateIsLoading(false)
     updatePack('open')
   }
@@ -27,7 +24,6 @@ export default function App() {
   const reset = () => {
     updateIsLoading(false)
     updatePack('closed')
-    console.log(packState)
     updateShowPack(true)
     updateShowCards(false)
     updateCardsContainer('')
@@ -35,15 +31,12 @@ export default function App() {
   }
 
   const doneAnimation = (e) => {
-    console.log('doneAnimation',e.target)
     updateShowCards(true)
     updateButtonState('reset')
     // updateShowPack(false)
   }
-  console.log('render-app',showCards)
   const button = () => {
 
-    console.log(buttonState)
     let buttonStyle = (
       <style jsx>{`
       .btn {
