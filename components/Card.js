@@ -8,7 +8,7 @@ const Card = (props) => {
 
   return (
     <div className="card">
-      <CardTemplate picUrl={props.picUrl} playerData={props.playerData} />
+      <CardTemplate picUrl={props.picUrl} playerData={props.playerData} moreData={props.moreData}/>
       <style jsx>{`
         .card {
           height: 350px;
