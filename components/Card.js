@@ -20,6 +20,8 @@ const Card = (props) => {
           display: flex;
           flex-direction: column;
           transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
         }
         .card__playerPic {
           width: 100%;
