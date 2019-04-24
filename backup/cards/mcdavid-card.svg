@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="250" height="350" filter="url(#filter)" viewBox="0 0 250 350">
+  <filter id="filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+    <feTurbulence type="fractalNoise" baseFrequency="0.5 0.5" numOctaves="1" seed="1" stitchTiles="noStitch" x="0%" y="0%" width="200%" height="100%" result="turbulence"></feTurbulence>
+    <feTurbulence type="turbulence" baseFrequency="0.01 0.01" numOctaves="6" seed="1" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence1"></feTurbulence>
+    <feComposite in="turbulence" in2="turbulence1" operator="over" x="0%" y="0%" width="100%" height="100%" result="composite2"></feComposite>
+    <feColorMatrix type="matrix" values="1 0 0 0 0
+ 1 0 0 0 0
+ 1 0 0 0 0
+ 1 0 0 1 0" x="0%" y="0%" width="100%" height="100%" in="composite2" result="colormatrix"></feColorMatrix>
+    <feComposite in="SourceGraphic" in2="colormatrix" operator="in" x="0%" y="0%" width="100%" height="100%" result="composite1"></feComposite>
+  </filter>
+  <defs>
+    <clipPath id="clip-path">
+      <path id="clipPath" d="M192.73,343.83a39.11,39.11,0,0,1,37.56-68.62V68a12,12,0,0,0-12-12H16.69a12,12,0,0,0-12,12V331.83a12,12,0,0,0,12,12Z" style="fill: none; stroke: rgb(255, 255, 255);"></path>
+    </clipPath>
+  </defs>
+  <rect height="350" width="250" fill="#041E42"></rect>
+  <g id="playerInfo">
+    <g style="clip-path: url(&quot;#clip-path&quot;);">
+      <image x="5" y="55" width="250" height="250" preserveAspectRatio="xMidYMid slice" xlink:href="https://nhl.bamcontent.com/images/actionshots/8478402.jpg"></image>
+      <g>
+        <rect transform="translate(0 300)" width="200px" height="70px" style="fill: rgb(247, 245, 232);"></rect>
+        <text transform="translate(15 317)" style="font-size: 13px; font-family: Arial-BoldMT, Arial; font-weight: 700; pointer-events: none;">
+          <tspan>CONNOR</tspan>
+        </text>
+        <text fill="#e54f4a" transform="translate(15 335)" style="font-size: 18px; font-family: Arial-BoldMT, Arial; font-weight: 700; pointer-events: none;">
+          <tspan>MCDAVID</tspan>
+        </text>
+      </g>
+    </g>
+    <path id="clipPath-2" data-name="clipPath" d="M192.73,343.83a39.11,39.11,0,0,1,37.56-68.62V68a12,12,0,0,0-12-12H16.69a12,12,0,0,0-12,12V331.83a12,12,0,0,0,12,12Z" style="fill: none; stroke: rgb(243, 188, 82);"></path>
+    <path
+      id="dataBackground"
+      d="M245.49,309.94a32.88,32.88,0,1,1-9.14-22.75V69.08s-.24-21.78-22-21.78h-192S4.69,47.39,4.69,29.87V6.69H14c0,15.12,15.28,15.09,15.28,15.09H225.36c19.91,0,20.13,19.88,20.13,19.88V309.94"
+      style="fill: rgb(247, 245, 232); stroke: rgb(0, 0, 0);"></path>
+    <g id="data">
+      <text transform="translate(25 39.74)" style="font-size: 15px; font-family: Arial-BoldItalicMT, Arial; font-weight: 700; font-style: italic; pointer-events: none;">
+        <tspan textLength="195" style="fill: rgb(229, 79, 74);">EDMONTON OILERS</tspan>
+      </text>
+      <g id="logo" transform="translate(88 286)">
+        <svg height="47px">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 16">
+            <g fill="#0038A8">
+              <path d="M18.56 14.148a.41.41 0 1 0-.41.412.41.41 0 0 0 .41-.412m-.735 0a.323.323 0 1 1 .646 0 .323.323 0 0 1-.645 0"></path>
+              <path d="M18.317 14.384l-.093-.2a.14.14 0 0 0-.047-.27h-.198v.47h.087v-.19h.063l.09.19h.097zm-.14-.28h-.11V14h.11a.05.05 0 0 1 .052.053.05.05 0 0 1-.052.05"></path>
+            </g>
+            <path fill="#0038A8" d="M12.445.384c.913 1.432 1.325 1.96 1.325 2.76 0 .963-.81 1.742-1.77 1.742s-1.772-.78-1.772-1.74c0-.803.412-1.33 1.325-2.762a7.63 7.63 0 1 0 .892 0"></path>
+            <path fill="#FFF" d="M12 14.936a6.935 6.935 0 0 0 1.785-13.64c.157.197.68.92.68 1.85 0 1.343-1.104 2.436-2.464 2.436S9.536 4.488 9.536 3.145c0-.93.524-1.65.68-1.848A6.937 6.937 0 0 0 12 14.937"></path>
+            <path
+              fill="#0038A8"
+              d="M13.443 8.832h-.497v.795a.29.29 0 0 1-.577 0V8.614h.576v-.75h-.577v-.586a.288.288 0 0 1 .576 0v.364h.497V5.96H11.34v1.03a.37.37 0 0 1 .37.368v2.346a.21.21 0 0 1-.212.21v4.25c0 .305-.16.443-.234.492a6.01 6.01 0 0 0 1.632-.02s.547-.108.547-.59V8.83z"></path>
+            <path fill="#0038A8" d="M11.34 8.832h-.498v.873a.21.21 0 0 1-.42 0V7.2c0-.115.095-.21.21-.21V5.96h-1.08v1.03c.115 0 .21.095.21.21v2.504a.21.21 0 0 1-.21.21v3.703c0 .31-.17.41-.25.44a5.89 5.89 0 0 0 1.54.532s.498.074.498-.426V8.832z"></path>
+            <path
+              fill="#0038A8"
+              d="M9.393 13.617V9.915a.21.21 0 0 1-.21-.21V7.2a.21.21 0 0 1 .21-.21V5.96H8.31v1.03a.21.21 0 0 1 .212.21v2.504a.21.21 0 0 1-.21.21v2.522c0 .527-.27.61-.412.618.334.325.71.61 1.12.85-.002 0 .373.143.373-.287m8.353-5.974V6.51a.55.55 0 0 0-.548-.55h-.648a.55.55 0 0 0-.55.55v1.514c0 .08.05.19.11.244l.867.775c.06.054.11.164.11.244v.335a.294.294 0 0 1-.59 0v-.79H16v4.317c1.076-1 1.745-2.398 1.745-3.946V8.98c0-.08-.048-.19-.108-.244l-.867-.775a.37.37 0 0 1-.11-.243v-.515a.213.213 0 0 1 .427 0v.44h.66z"></path>
+            <path
+              fill="#0038A8"
+              d="M8.153 12.437V6.51a.55.55 0 0 0-.55-.55h-.8a.55.55 0 0 0-.55.55v2.694c0 1.35.51 2.585 1.352 3.54.165.216.548.277.548-.307m7.479-2.733V8.477c0-.21-.235-.307-.235-.307s.235-.097.235-.307V6.51a.55.55 0 0 0-.55-.55h-1.48v1.03a.21.21 0 0 1 .21.21v2.504a.21.21 0 0 1-.21.21v4.13a.683.683 0 0 1-.203.493 5.928 5.928 0 0 0 1.115-.388s.254-.124.254-.586v-3.65a.295.295 0 0 1-.297-.295v-.917a.227.227 0 0 1 .454 0v4.908c0 .14-.02.257-.048.354.293-.162.57-.35.828-.56 0 0 .137-.113.137-.65v-2.84a.21.21 0 0 1-.213-.21"></path>
+            <path fill="#FFF" d="M7.203 6.99a.29.29 0 0 0-.29.29v2.346a.29.29 0 0 0 .58 0V7.28a.29.29 0 0 0-.29-.29m7.519.873a.25.25 0 0 0 .25-.25V7.24a.25.25 0 0 0-.25-.25.25.25 0 0 0-.25.25v.373c0 .138.112.25.25.25"></path>
+            <path fill="#D14414" d="M13.29 3.17c0-.904-.784-1.387-1.29-2.648-.506 1.262-1.29 1.744-1.29 2.648 0 .617.51 1.22 1.29 1.22s1.29-.603 1.29-1.22"></path>
+          </svg>
+        </svg>
+      </g>
+      <text transform="translate(20 15)" style="font-size: 15px; font-family: Arial-BoldMT, Arial; font-weight: 700; pointer-events: none;">
+        <tspan fill="#fff">
+          <tspan>#97</tspan>·<tspan>C</tspan>
+        </tspan>
+      </text>
+    </g>
+  </g>
+</svg>
