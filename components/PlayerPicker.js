@@ -30,7 +30,7 @@ const PlayerPicker = (props) => {
             let img = new Image()
             img.onload = () => resolve(img)
             img.onerror = () => defaultImg(img)
-            img.src = "https://nhl.bamcontent.com/images/actionshots/" + props.playerList[index].person.id + ".jpg"
+            img.src = "https://cms.nhl.bamgrid.com/images/actionshots/" + props.playerList[index].person.id + ".jpg"
           })
         )
         playerPromises.push(
