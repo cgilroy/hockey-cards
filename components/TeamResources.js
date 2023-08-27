@@ -30,6 +30,7 @@ import LogoMIN from '../static/logos/NHL-icons-MIN.svg';
 import LogoWPG from '../static/logos/NHL-icons-WPG.svg';
 import LogoARI from '../static/logos/NHL-icons-ARI.svg';
 import LogoVGK from '../static/logos/NHL-icons-VGK.svg';
+import LogoSEA from '../static/logos/NHL-icons-SEA.svg';
 
 const teamResources = {
   "1": {
@@ -186,6 +187,11 @@ const teamResources = {
     "teamName":"Vegas Golden Knights",
     "logo":<LogoVGK/>,
     "primaryColor":"#B4975A"
+  },
+  "55": {
+    "teamName":"Seattle Kraken",
+    "logo":<LogoSEA/>,
+    "primaryColor":"#001628"
   }
 }
 
