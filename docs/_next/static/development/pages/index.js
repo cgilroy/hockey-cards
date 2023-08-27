@@ -2936,13 +2936,49 @@ LogoVGK.defaultProps = {
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 960 640"
 };
+
+var LogoSEA = function LogoSEA(props) {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("svg", Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("style", {
+    __self: this
+  }, ".st0", "{", "fill:#001425", "}", ".st1", "{", "fill:#96d8d8", "}", ".st2", "{", "fill:#c8102e", "}", ".st3", "{", "fill:#639fb6", "}"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
+    className: "st0",
+    d: "M29.31 234.51c56.12 4.91 91.71 20.73 109.03 53.49 59.31-9.61 114.17-47.65 114.17-96.69 0-65.33-79.15-75.6-81.26-94.63 33.29 12.07 69.94-.63 87.43-42.17C206.97 50.69 169.11 31.83 152.74 0 89.31 11.29 38.57 52.34 38.57 96.69c0 64.77 83.25 81.92 92.57 95.66-45.43-17.23-84.62 2.4-101.83 42.16z",
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
+    className: "st1",
+    d: "M127.75 93.34c-7.1-7.21-10.06-12.86-10.06-20.32 0-8.53 4.11-12.7 4.11-17.48 0-4.1-2.58-7.32-7.52-8.3 2.93-3.16 6.91-5.06 10.6-5.06 21.17 0 27.42 46.79 71.59 45.11 15.74-1.51 30.62-9.16 39.97-22.58-38.57-5.01-73.78-21.4-90.99-49.26-17.85 3.25-92.69 29.08-90.8 83.06 1.97 56.29 85.22 71.94 108.51 96.11 18.36 19.06 5.43 38.27-6.41 45.25-18.28-47.55-78.37-50.93-102.29-16.61 38.57 5.01 73.78 21.4 90.99 49.26 42.55-8.93 63.07-46.24 55.26-73.15-12.93-44.54-96.88-52.37-119.15-94.09-11.9-23.47-2.12-48.53 19.64-63.11-8.54 11.01-12.62 23.69-12.44 35.56 1.93 2.1 2.75 7.04 2.77 7.14.28 1.72.79 5.36-.11 7.59.95 2.5 2.17 4.88 3.63 7.16 2.91.73 6.19 4.53 6.25 4.61 3.2 3.68 3.7 6.01 3.78 6.89 1.98 1.77 4.1 3.47 6.35 5.13 1.87-.22 4.73.69 7.63 2.53 3.34 2.19 5.01 4.36 5.48 5.98 2.33 1.36 4.72 2.69 7.16 4 1.87-.51 4.95.08 8.04 1.67 3.1 1.59 5.38 3.76 6.05 5.59 2.45 1.22 4.92 2.45 7.4 3.67 1.87-.54 4.98 0 8.1 1.59 3.05 1.56 5.29 3.7 6 5.51 2.53 1.31 5.03 2.64 7.5 3.99 2.3-.47 5.96.93 7.96 2.12 2.95 1.76 4.97 4.05 5.57 5.9 2.5 1.62 4.91 3.29 7.22 5.01 1.95-.09 4.83 1.03 7.51 3.31 2.89 2.52 4.38 5.29 4.44 7.21 2 2.14 3.84 4.36 5.48 6.69 2.37.59 4.75 3.33 6.08 6.08 1.84 4.01 1.6 6.83 1.06 8.29 3.19 9.96 4.05 22.51-1.08 36.94-.05.15-.12.33-.2.51 10.74-11.7 18.01-26.1 17.4-43.39-1.95-56.29-85.19-71.94-108.48-96.11z",
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
+    className: "st2",
+    d: "M159.7 99.24c-9.51-10.94-15.59-30.34-26.08-37.91-4.7 16.7 5.09 34.97 26.08 37.91z",
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
+    className: "st3",
+    d: "M152.16 256.21c-3.43 10.06-6.71 16.3-6.71 16.3-17.2-27.86-52.42-44.25-90.99-49.26 39.86-19.98 81.12 1.04 97.7 32.96zm84.28-191.52c-39.85 19.98-81.12-1.04-97.7-32.97 3.43-10.06 6.71-16.3 6.71-16.3-16.85 3.07-92.71 28.62-90.8 83.06 1.97 56.29 85.22 71.94 108.51 96.11 18.36 19.06 5.43 38.27-6.41 45.25-1.35 6.12-2.99 11.65-4.59 16.36 8.67-1.51 34.96-15.43 35.13-42.21.24-36.91-47.47-46.69-83.62-69.09-29.76-18.44-35.54-36.73-37.05-48.31-3.55-27.24 15.67-52.12 43.62-63.85-4.01 3.42-7.12 6.75-9.04 9.41-8.54 11.01-12.62 23.69-12.44 35.56 1.93 2.11 2.75 7.04 2.77 7.14.28 1.72.79 5.36-.11 7.59.95 2.5 2.17 4.88 3.63 7.16 2.91.73 6.19 4.53 6.25 4.61 3.2 3.68 3.7 6.01 3.78 6.89 1.98 1.77 4.1 3.47 6.35 5.13 1.87-.22 4.73.69 7.63 2.53 3.34 2.19 5.01 4.36 5.48 5.98 2.33 1.36 4.72 2.69 7.16 4 1.87-.51 4.95.08 8.04 1.67 3.1 1.59 5.38 3.76 6.05 5.59 2.45 1.22 4.92 2.45 7.4 3.67 1.87-.54 4.98 0 8.1 1.59 3.05 1.56 5.29 3.7 6 5.51 2.53 1.31 5.03 2.64 7.5 3.99 2.3-.47 5.96.93 7.96 2.12 2.95 1.76 4.97 4.05 5.57 5.9 2.5 1.62 4.91 3.29 7.22 5.01 1.95-.09 4.83 1.03 7.51 3.31 2.89 2.52 4.38 5.29 4.44 7.21 2 2.14 3.84 4.36 5.48 6.69 2.37.59 4.75 3.33 6.08 6.08 1.84 4.01 1.6 6.83 1.06 8.29 3.19 9.96 4.05 22.51-1.08 36.94 13.73-23.27 12.41-46.38-2.94-65.91-32.08-40.82-112.79-45.69-112.49-92.48.07-11.13 4.72-19.98 10.67-26.7 2.93-3.16 6.91-5.06 10.6-5.06 21.17 0 27.42 46.79 71.59 45.11 15.76-1.51 30.64-9.16 39.98-22.58z",
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("g", {
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("path", {
+    className: "st1",
+    d: "M209.07 275.61v-6.07h-2.27v-1.27h5.97v1.27h-2.21v6.07h-1.49zm4.59 0v-7.35h2.32l1.34 5.06 1.35-5.06h2.32v7.35h-1.42v-5.86l-1.59 5.86h-1.35l-1.58-5.86v5.86h-1.39z",
+    __self: this
+  })));
+};
+
+LogoSEA.defaultProps = {
+  id: "Layer_1",
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "0 0 288 288"
+};
 var teamResources = {
   "1": {
     "teamName": "New Jersey Devils",
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoNJD, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 38
       },
       __self: undefined
     }),
@@ -2953,7 +2989,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoNYI, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 43
       },
       __self: undefined
     }),
@@ -2964,7 +3000,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoNYR, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 48
       },
       __self: undefined
     }),
@@ -2975,7 +3011,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoPHI, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 53
       },
       __self: undefined
     }),
@@ -2986,7 +3022,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoPIT, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 57
+        lineNumber: 58
       },
       __self: undefined
     }),
@@ -2997,7 +3033,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoBOS, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 63
       },
       __self: undefined
     }),
@@ -3008,7 +3044,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoBUF, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 67
+        lineNumber: 68
       },
       __self: undefined
     }),
@@ -3019,7 +3055,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoMTL, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 72
+        lineNumber: 73
       },
       __self: undefined
     }),
@@ -3030,7 +3066,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoOTT, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 77
+        lineNumber: 78
       },
       __self: undefined
     }),
@@ -3041,7 +3077,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoTOR, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 82
+        lineNumber: 83
       },
       __self: undefined
     }),
@@ -3052,7 +3088,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoCAR, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 87
+        lineNumber: 88
       },
       __self: undefined
     }),
@@ -3063,7 +3099,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoFLA, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 92
+        lineNumber: 93
       },
       __self: undefined
     }),
@@ -3074,7 +3110,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoTBL, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 97
+        lineNumber: 98
       },
       __self: undefined
     }),
@@ -3085,7 +3121,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoWSH, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 102
+        lineNumber: 103
       },
       __self: undefined
     }),
@@ -3096,7 +3132,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoCHI, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107
+        lineNumber: 108
       },
       __self: undefined
     }),
@@ -3107,7 +3143,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoDET, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 112
+        lineNumber: 113
       },
       __self: undefined
     }),
@@ -3118,7 +3154,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoNSH, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 117
+        lineNumber: 118
       },
       __self: undefined
     }),
@@ -3129,7 +3165,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoSTL, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 122
+        lineNumber: 123
       },
       __self: undefined
     }),
@@ -3140,7 +3176,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoCGY, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 127
+        lineNumber: 128
       },
       __self: undefined
     }),
@@ -3151,7 +3187,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoCOL, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 132
+        lineNumber: 133
       },
       __self: undefined
     }),
@@ -3162,7 +3198,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoEDM, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 137
+        lineNumber: 138
       },
       __self: undefined
     }),
@@ -3173,7 +3209,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoVAN, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 142
+        lineNumber: 143
       },
       __self: undefined
     }),
@@ -3184,7 +3220,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoANA, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 147
+        lineNumber: 148
       },
       __self: undefined
     }),
@@ -3195,7 +3231,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoDAL, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 152
+        lineNumber: 153
       },
       __self: undefined
     }),
@@ -3206,7 +3242,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoLAK, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 157
+        lineNumber: 158
       },
       __self: undefined
     }),
@@ -3217,7 +3253,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoSJS, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 162
+        lineNumber: 163
       },
       __self: undefined
     }),
@@ -3228,7 +3264,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoCBJ, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 167
+        lineNumber: 168
       },
       __self: undefined
     }),
@@ -3239,7 +3275,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoMIN, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 172
+        lineNumber: 173
       },
       __self: undefined
     }),
@@ -3250,7 +3286,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoWPG, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 177
+        lineNumber: 178
       },
       __self: undefined
     }),
@@ -3261,7 +3297,7 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoARI, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 182
+        lineNumber: 183
       },
       __self: undefined
     }),
@@ -3272,11 +3308,22 @@ var teamResources = {
     "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoVGK, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 187
+        lineNumber: 188
       },
       __self: undefined
     }),
     "primaryColor": "#B4975A"
+  },
+  "55": {
+    "teamName": "Seattle Kraken",
+    "logo": react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LogoSEA, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 193
+      },
+      __self: undefined
+    }),
+    "primaryColor": "#001628"
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (teamResources);
@@ -11193,7 +11240,7 @@ var _jsxFileName = "/Users/cjgilroy/Desktop/Development/React/hockey-cards/pages
 
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "jsx-1028220061",
+    className: "jsx-4098184096",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
@@ -11206,7 +11253,7 @@ var _jsxFileName = "/Users/cjgilroy/Desktop/Development/React/hockey-cards/pages
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
-    className: "jsx-1028220061",
+    className: "jsx-4098184096",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
@@ -11215,7 +11262,7 @@ var _jsxFileName = "/Users/cjgilroy/Desktop/Development/React/hockey-cards/pages
   }, "Hockey Cards"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
     name: "viewport",
     content: "width=device-width, initial-scale=1",
-    className: "jsx-1028220061",
+    className: "jsx-4098184096",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 8
@@ -11223,16 +11270,16 @@ var _jsxFileName = "/Users/cjgilroy/Desktop/Development/React/hockey-cards/pages
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
     charSet: "utf-8",
-    className: "jsx-1028220061",
+    className: "jsx-4098184096",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    id: "1028220061",
+    id: "4098184096",
     __self: this
-  }, "body{margin:0;font-family:sans-serif;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9jamdpbHJveS9EZXNrdG9wL0RldmVsb3BtZW50L1JlYWN0L2hvY2tleS1jYXJkcy9wYWdlcy9pbmRleC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFVbUIsQUFHYyxTQUNjLHVCQUN6QiIsImZpbGUiOiIvVXNlcnMvY2pnaWxyb3kvRGVza3RvcC9EZXZlbG9wbWVudC9SZWFjdC9ob2NrZXktY2FyZHMvcGFnZXMvaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgQXBwIGZyb20gJy4uL2NvbXBvbmVudHMvQXBwLmpzJ1xuaW1wb3J0IEhlYWQgZnJvbSAnbmV4dC9oZWFkJ1xuaW1wb3J0IF9KU1hTdHlsZSBmcm9tICdzdHlsZWQtanN4L3N0eWxlJ1xuZXhwb3J0IGRlZmF1bHQgKCkgPT4gKFxuICA8ZGl2PlxuICA8SGVhZD5cbiAgPHRpdGxlPkhvY2tleSBDYXJkczwvdGl0bGU+XG4gIDxtZXRhIG5hbWU9XCJ2aWV3cG9ydFwiIGNvbnRlbnQ9XCJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MVwiIC8+XG4gIDxtZXRhIGNoYXJTZXQ9XCJ1dGYtOFwiIC8+XG48L0hlYWQ+XG48c3R5bGUganN4IGdsb2JhbD57YFxuICBib2R5IHtcbiAgICBtYXJnaW46IDA7XG4gICAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XG4gIH1cbmB9PC9zdHlsZT5cbiAgPEFwcCAvPlxuICA8L2Rpdj5cbilcbiJdfQ== */\n/*@ sourceURL=/Users/cjgilroy/Desktop/Development/React/hockey-cards/pages/index.js */"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_App_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, "body{margin:0;font-family:sans-serif;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9jamdpbHJveS9EZXNrdG9wL0RldmVsb3BtZW50L1JlYWN0L2hvY2tleS1jYXJkcy9wYWdlcy9pbmRleC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFVcUIsQUFHZ0IsU0FDYyx1QkFDekIiLCJmaWxlIjoiL1VzZXJzL2NqZ2lscm95L0Rlc2t0b3AvRGV2ZWxvcG1lbnQvUmVhY3QvaG9ja2V5LWNhcmRzL3BhZ2VzL2luZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IEFwcCBmcm9tICcuLi9jb21wb25lbnRzL0FwcC5qcydcbmltcG9ydCBIZWFkIGZyb20gJ25leHQvaGVhZCdcbmltcG9ydCBfSlNYU3R5bGUgZnJvbSAnc3R5bGVkLWpzeC9zdHlsZSdcbmV4cG9ydCBkZWZhdWx0ICgpID0+IChcbiAgPGRpdj5cbiAgPEhlYWQ+XG4gICAgPHRpdGxlPkhvY2tleSBDYXJkczwvdGl0bGU+XG4gICAgPG1ldGEgbmFtZT1cInZpZXdwb3J0XCIgY29udGVudD1cIndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xXCIgLz5cbiAgICA8bWV0YSBjaGFyU2V0PVwidXRmLThcIiAvPlxuICA8L0hlYWQ+XG4gIDxzdHlsZSBqc3ggZ2xvYmFsPntgXG4gICAgYm9keSB7XG4gICAgICBtYXJnaW46IDA7XG4gICAgICBmb250LWZhbWlseTogc2Fucy1zZXJpZjtcbiAgICB9XG4gIGB9PC9zdHlsZT5cbiAgPEFwcCAvPlxuICA8L2Rpdj5cbilcbiJdfQ== */\n/*@ sourceURL=/Users/cjgilroy/Desktop/Development/React/hockey-cards/pages/index.js */"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_App_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 17
